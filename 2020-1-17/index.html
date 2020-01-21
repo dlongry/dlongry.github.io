@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="DlongRY">
 <meta property="og:description" content="由于我在公司的职位现阶段的职位是模型结构搜索方向的算法工程师，业内的人士都清楚这个方向是比较耗费硬件资源，特别是GPU。比如一个算法可能就会需要同时32张GPU卡跑一周才出来一个实验结果。今天恰好在公司听到几位同事在讨论公司最近正在修改硬件资源分配的策略的问题。现在的情况是公司整体的硬件资源不够。公司的策略是按照优先级进行排序，对于某一个人的是第一个任务那么提交的时候就放在第一梯队，这个人的第二任">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-17T18:36:13.404Z">
+<meta property="og:updated_time" content="2020-01-21T08:42:00.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈资源分配">
 <meta name="twitter:description" content="由于我在公司的职位现阶段的职位是模型结构搜索方向的算法工程师，业内的人士都清楚这个方向是比较耗费硬件资源，特别是GPU。比如一个算法可能就会需要同时32张GPU卡跑一周才出来一个实验结果。今天恰好在公司听到几位同事在讨论公司最近正在修改硬件资源分配的策略的问题。现在的情况是公司整体的硬件资源不够。公司的策略是按照优先级进行排序，对于某一个人的是第一个任务那么提交的时候就放在第一梯队，这个人的第二任">
@@ -351,7 +351,7 @@
 <p>我这里有一个不太成熟的想法是这样的，简单来说：首先需要统计下每个人在N天得到一个实验结果需要多少卡。如果资源少，那么N在满足进度的前提下可以适当的大点，如果资源多，项目时间紧，那么N就适当的小一点。然后就设置某些卡的优先级让这个人在这些相应的卡的任务的优先级相较其他人都最高。如果这些卡没有人用，其他人需要跑任务的话，那么在按照最开始设定的排队策略来跑其他人的程序。</p>
 <p>上面的想法可以概括成，<strong>不同的GPU卡的优先级设置是不同的，组织规模的从大到小排序分别是：公司，院，部门，组，个人。那么个人先在自己的优先级卡先跑，如果不够则会占用同组的资源卡池，但是优先级会降一等，同组的不够就会尝试去占用同一部门的资源卡池，但是此时任务的优先级会在降一等</strong>。以此类推。通过这种方法来缓解资源占用不均匀的情况。比如上述的第一点，某一个人的任务运行比较快，频率高，那么他就会在自己的优先级卡时里面跑，想跑其他人的卡的话优先级就降了，而减少了对其他人的影响。又比如上述的第二点也是如此。</p>
 <p>当然这样做必然引入了其他的弊端。比如增加了维护和开发的成本等等。</p>
-<p>最后，我相信万物的发展规律一般都存在Z字曲线，即 刚开始采取某个正确改变的时候，由于需要适应期，可能产出还不如之前已经习惯的策略。但是一旦熬过了这个阶段，那么改变的优势就会很好的体现出来。我们公司的目前就处在习惯的阶段，相信以后会越来越好。</p>
+<p>最后，我相信万物的发展规律一般都存在J字曲线，即 刚开始采取某个正确改变的时候，由于需要适应期，可能产出还不如之前已经习惯的策略。但是一旦熬过了这个阶段，那么改变的优势就会很好的体现出来。我们公司的目前就处在习惯的阶段，相信以后会越来越好。</p>
 <p>另外这种分配策略，用在其他资源上是不是也一样呢？在其他资源上是否存在共赢的局面，而非这种零和博弈的情况呢？以后有机会在好好思考一下。</p>
 
       
@@ -393,8 +393,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020-1-18/" rel="prev" title="实用折纸收集">
-                实用折纸收集 <i class="fa fa-chevron-right"></i>
+              <a href="/RandWalkStree_1/" rel="prev" title="漫步华尔街第一章">
+                漫步华尔街第一章 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -463,7 +463,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -474,7 +474,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
