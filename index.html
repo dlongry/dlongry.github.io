@@ -249,6 +249,194 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-3-20/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dlong RY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DlongRY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020-3-20/" itemprop="url">如果才叫做做好实验设计</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-20T22:01:00+08:00">
+                2020-03-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/每日感悟杂谈/" itemprop="url" rel="index">
+                    <span itemprop="name">每日感悟杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020-3-20/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020-3-20/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020-3-20/" class="leancloud_visitors" data-flag-title="如果才叫做做好实验设计">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>如何才算做好实验设计, 针对一个算法工程师而言，算是每天都要思考的一个问题。今天我就收集网上一些资料并结合自己的经验进行总结（可能会不断的更新）。</p>
+<h2 id="实验流程："><a href="#实验流程：" class="headerlink" title="实验流程："></a>实验流程：</h2><ul>
+<li><strong>1.定位问题：</strong> 作为一个算法工程师，当性能满足不了要求的时候，你要学会找到具体的问题。是什么导致了算法无法满足性能要求。此时，你可能需要打开观察数据，定位性能不好的样本分析原因。</li>
+<li><p><strong>2.根据定位的原因设计实验：</strong> 当你定位到可能的原因之后，就假设这个原因就是问题所在，接下来你需要设计实验使得这个问题可以被解决或者缓解。  </p>
+</li>
+<li><p><strong>3.分析实验结果：</strong> 如果实验设计合理，并且结果有效，那么恭喜你很可能你的假设是成立的。但是很多时候结果是没有效的，那么你既要分析此次实验失败的原因，又要重头对原始性能不理想的地方进行问题的定位。</p>
+</li>
+</ul>
+<h2 id="如何根据定位的原因设计实验："><a href="#如何根据定位的原因设计实验：" class="headerlink" title="如何根据定位的原因设计实验："></a>如何根据定位的原因设计实验：</h2><p>实验流程主要有3个部分，今天主要分享第二步，如何根据定位的原因设计实验。首先定位的原因大部分情况下，只是你根据以往的经验判断出来的可能原因。你需要实验去检验这个原因是否真的是导致性能不满住要求的关键因素。</p>
+<h3 id="1、做好假设，明确实验目的："><a href="#1、做好假设，明确实验目的：" class="headerlink" title="1、做好假设，明确实验目的："></a>1、做好假设，明确实验目的：</h3><p>那么一个好的假设必须满足以下几个性质：</p>
+<ul>
+<li>假设要具有预测性：可以预测问题中的自变量和因变量的关系，可以简单用“如果。。。就。。”进行概括，然后跟实验结果进行对比。</li>
+<li>假设应该要可行性：其中所包含的概念都应该可以通过自变量与因变量加以操纵。</li>
+<li>假设应该具有科学性：这个很重要，不能凭空构建假设，毕竟这种廉价的假设太多，会影响你的实验效率。</li>
+</ul>
+<h3 id="2-确保实验可重复："><a href="#2-确保实验可重复：" class="headerlink" title="2.确保实验可重复："></a>2.确保实验可重复：</h3><ul>
+<li>如果是代码，若有随机的过程，一定要记得设置固定的随机种子，确保随机性，和实验的可复现。</li>
+</ul>
+<h3 id="3-确认和控制实验的无关变量："><a href="#3-确认和控制实验的无关变量：" class="headerlink" title="3.确认和控制实验的无关变量："></a>3.确认和控制实验的无关变量：</h3><ul>
+<li>分离出自变量和因变量之后，需要考虑除了自变量之外，哪些变量的值也会影响因变量。并把他们一一列而出。尽量两组对比实验，除了自变量之外，其他无关变量的影响控制到最低。常见的控制无关变量的方法就三种:1）消除： 控制无关变量最完美的办法就是简单地把它们从实验环境中消除，但是有些无法消除的无关变量就需要使用恒常法 2）对于不能消除的变量，我们可以使它在整个实验中保持恒定，即所有的实验对比都接受相同的无关变量，这种控制方法称为恒常法。3）平衡法：是让无关变量产生的作用在所有的实验组及控制组的效果都保持平衡。也就是说，每一组都受到这些无关变量变化的作用，但它们作用的大小在各组都是一样的。</li>
+<li>这个平衡法和恒常法容易被混淆：这个举个例子：平衡各组“性别”变量的作用： 二十名被试，十二个男性，八个女性。分成两组进行实验。假设被试的性别可能会对因变量产生作用，所以，需要控制这个无关变量。先把12名男性被试随机分为两组，再把8名女性被试随机分到两个组中，这样，在每一组内性别都有变化，这种变化有可能对因变量产生影响，但是由于性别因素对两个组的影响效应都是一样的，因此这种作用就被平衡了。</li>
+<li>其他的控制变量法在AI算法工程的实验中比较少用到，这里列出名字。4） 抵消平衡法 5）随机化法 6）系统变化法  详细的可以参考：<a href="https://wenku.baidu.com/view/21326fda79563c1ec4da715f.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/21326fda79563c1ec4da715f.html</a></li>
+</ul>
+<h3 id="一定要记得保存实验过程数据，利于后续分析"><a href="#一定要记得保存实验过程数据，利于后续分析" class="headerlink" title="一定要记得保存实验过程数据，利于后续分析"></a>一定要记得保存实验过程数据，利于后续分析</h3><ul>
+<li><strong>记录实验过程中自变量，中间变量，与中间阶段的因变量的分析：</strong> 分析后期可能用到的数据进行保存。这样的一个作用是方便后续进行实验结果的分析。另一个作用就是可以尽早发现问题，可能是假设的问题，可能是代码的问题，可以尽早发现错误，节省时间和资源。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-3-18/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -363,13 +551,14 @@
       
         
           
-            <p>我个人认为上学的目的不仅仅是学习知识，更应该学习获得知识的方法。其中很关键的在于学会思考与分析，看到问题的本质并做到举一反三，触类旁通。在波利亚的《怎样解题》中也是这样建议：在做每道题的最后应该进行回顾反思，主要包括如下几个问题：</p>
+            <p>上学的目的不仅仅是学习知识，更应该学习获得知识的方法。其中很关键的在于学会思考与分析，看到问题的本质并做到举一反三，触类旁通。在波利亚的《怎样解题》中也是这样建议的。更细节的，他建议在做每道题的最后应该进行回顾反思，主要包括如下问自己如下几个问题：</p>
 <ul>
-<li>（1）<strong>你能否检验这个结论？：</strong>这点主要是为了检查你思路或者求解过程是否准确，注意检验不仅仅是叫你重复检查求解的步骤是否错误，而是想办法换一种方式进行检查结果。而且检验往往会比求解来的简单。就如解方程组的题目，你通过一系列步骤求解了x，y的值。这个求解过程可能是比较复杂的。和求解过程不同，检验的时候你可以直接简单的将求解的值带入公式，看下等号是否成立来检验结论。所以每做一道题目，你就要思考是否有像这种，将解带入这样的快速检验的方法，避免自己的错误。这种时候也可以使用反证法来进行证明，详细的话等以后有时间了在进行总结。</li>
-<li>（2）<strong>你能否用别的方法也推导出这个结论？：</strong> 首先，联系第一点，从不同的方法如果得出相同的结论，那么可以用来验证之前方法的结果是否错误。再者其实核心的作用在于将两个不同的知识点连接在一起。由助于你理解不同方法之间的关系，学会知识点间的融会贯通，并通过对比不同的方法，懂得思考那种方法最好，锻炼分析能力和提高创造性思维。</li>
+<li>（1）<strong>你能否检验这个结论？：</strong>这点主要是为了检查你思路或者求解过程是否准确，注意检验不仅仅是叫你重复检查求解的步骤是否错误，而是想办法换一种方式进行检查结果。而且检验往往会比求解来的简单。就如解方程组的题目，你通过一系列步骤求解了x，y的值。这个求解过程可能是比较复杂的。和求解过程不同，检验的时候你可以直接简单的将求解的值带入公式，看下等号是否成立来检验结论。所以每做一道题目，你就要思考是否有像这种，将解带入这样的快速检验的方法，避免自己的错误。这种时候也可以使用反证法来进行证明等。</li>
+<li>（2）<strong>你能否用别的方法也推导出这个结论？：</strong> 这种思考的作用不言而喻。首先，联系第一点，从不同的方法如果得出相同的结论，那么可以用来验证之前方法的结果是否错误。再者其实核心的作用在于将两个不同的知识点连接在一起。由助于你理解不同方法之间的关系，学会知识点间的融会贯通，并通过对比不同的方法，懂得思考那种方法最好，锻炼分析能力和提高创造性思维。</li>
 <li>（3）<strong>你能不能把这个结果或者方法用在其他问题？</strong>：这其中有分为了两种角度，一种是“一题多问” 另一种是“一题多变”。其中一题多问的意思是：同一道题，同样的条件，从不同的角度出发，可以提出不同的问题。而“一题多变”就是通过改变条件，扩大问题的范围，将一道问题一类问题，并尝试总结这类问题的通用解法。</li>
 </ul>
-<p>本文就如何将一道题变成一类题，坐下简单的分享和思考：其中一种方法就是将已知条件用变量来代替，通过讨论变量的不同值得情况，将一道题变成一类题。具体可以举一下我今天碰到的一个问题。</p>
+<p>本文就如何将一道题变成一类题，坐下简单的分享和思考：其中一种方法就是将已知条件用变量来代替，通过讨论变量的不同情况，将一道题变成一类题。具体可以举一下我今天碰到的一个问题。<br>现要在一块长25公里，宽8公里的长方形矩阵内设置哨塔，每个哨塔的监视半径为5公里。如果要求整个区域内的每个较弱都能被监视到，则至少需要设置多少个哨塔？</p>
+<p>我们先来单纯解决这道题：</p>
 
           
         
@@ -1810,184 +1999,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-1-13/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dlong RY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DlongRY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020-1-13/" itemprop="url">从组会看自己</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-13T22:35:54+08:00">
-                2020-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/每日感悟杂谈/" itemprop="url" rel="index">
-                    <span itemprop="name">每日感悟杂谈</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020-1-13/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020-1-13/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020-1-13/" class="leancloud_visitors" data-flag-title="从组会看自己">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="2020-1-13："><a href="#2020-1-13：" class="headerlink" title="2020-1-13："></a>2020-1-13：</h3><p>  – 今天早上：开了组会，报告了上一周的内容，其中深刻体会到了一点，就是自己所报导的事情，领导并不是很关注，反而自己觉得次要的地方，领导进行细节询问。结果由于自己不重视，细节的提问也没有回答上来。所以从这里我复盘了一下，得出了两个可以改进的地方：首先是：领导并没有意识到我工作的重要性，或者说目的，可能需要在报告中详细提出，让领导觉得上周内容有进步并且有价值。另一个问题是：<strong>我并不知道领导最近在思考，公司最近最需要解决的问题是什么？所以这样使我思考的方向，判断工作内容的重要程度的评价方法和领导有所偏差，以后需要和领导多沟通，并了解公司具体需要哪些问题进行解决</strong>。</p>
-<p>  –今天下午：进行了专利的修改，发现写专利的话，并不是有一个点创新，写清楚就可以。你需要写的是你解决问题的一整套方案。所以你必须写清楚每个步骤，即使有些步骤不是你要保护的权利要求。另外，专利的上位虽然是交给专利代理人的，但是你也需要自己进行相关的上位，专利代理人写完初稿会叫你进行修改，主要查看自己保护的点是否都在专利保护范围，是否有一些细节没有写清楚，或者写的太清楚。是否存在现有方法无效掉专利的情况等。今天自己修改完专利后，找了主管进行审阅，<strong>发现自己看的还是不够仔细，重点看权利要求，需要进行每个句子和词的仔细揣摩，判断当前词是否有歧义等</strong>。而且发现有些词的理解你和代理人是存在区别的，你觉得可能存在歧义，但是代理人觉得不会有，这个时候，我的做法是听代理人的。但是也不知道这样做是好还是坏。</p>
-<p>  –今天晚上：最近正在忙着做论文的实验，但是实验结果却不是很理想，之前认为在随机采集的数据集上进行测量的结果，性能很好。但是今天发现几个数据上体现的误差极大。这说明之前的实验的论证实际上是存在不妥的地方的。测试集无法很好的验证模型在各个样本上的性能。那么一样，我们需要先进行问题的定位，实验结果查无非是如下几个条件不满足造成的实验结果:</p>
-<ul>
-<li><strong>算法本身问题</strong>：是否是因为算法有效的前提条件本身不满足</li>
-<li><strong>数据输入的问题</strong>：是否是因为数据集采集不全面，和训练数据分布差异过大</li>
-<li><strong>训练的问题</strong>：训练是否有收敛，或者过拟合了</li>
-<li><p><strong>测试的问题</strong>：是否训练的数据和测试的数据之间保持了一致性，比如预处理等</p>
-<p>明天从这四个方向好好确定下问题所在，在根据问题进一步的改进。</p>
-</li>
-</ul>
-<p>–今天深夜：听了大咖的一些阅读分享，收货很大，简要的进行两点进行总结：</p>
-<ul>
-<li>1.共有信息到大众信息转化的重要性，即有些话需要直接表达出来，不要去猜对方，例如领导，朋友的想法。</li>
-<li>2.未来的核心竞争力，可能并不是你去掌握多少种技能或者技术，而是如何调度周边的技能或者技术，进行整合资源，创造出更高价值的能力。</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2038,7 +2049,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
