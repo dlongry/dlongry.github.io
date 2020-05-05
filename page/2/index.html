@@ -249,6 +249,179 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-1-17/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dlong RY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DlongRY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020-1-17/" itemprop="url">浅谈资源分配</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-17T22:08:00+08:00">
+                2020-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/每日感悟杂谈/" itemprop="url" rel="index">
+                    <span itemprop="name">每日感悟杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020-1-17/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020-1-17/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020-1-17/" class="leancloud_visitors" data-flag-title="浅谈资源分配">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>由于我在公司的职位现阶段的职位是模型结构搜索方向的算法工程师，业内的人士都清楚这个方向是比较耗费硬件资源，特别是GPU。比如一个算法可能就会需要同时32张GPU卡跑一周才出来一个实验结果。今天恰好在公司听到几位同事在讨论公司最近正在修改硬件资源分配的策略的问题。现在的情况是公司整体的硬件资源不够。公司的策略是按照优先级进行排序，对于某一个人的是第一个任务那么提交的时候就放在第一梯队，这个人的第二任务提交就放在第二个梯队，以此类推。等第一个梯队的任务全部都排完之后，才轮到第二个梯队的任务进行排队。这样做很明显会出现这两个问题：</p>
+<ul>
+<li>1.如果某一个人的任务运行比较快，但是频率却很高，那么他的任务永远在第一梯队。导致所有人第二个任务永远在排队，别人永远都只能运行一个实验。就造成了资源分配的不公平性。</li>
+<li>2.每个人跑一个实验需要同时跑的GPU卡数是不一样，那么就会出现这种情况，就是现在公司可能可用的GPU卡数只剩下了24张，此时第一梯队第一个任务的实验可能需要32张卡，那么现有公司策略是等待，等待什么时候GPU卡数满足了32张卡，执行完第一梯队的第一个任务后，在轮到第二个任务的执行。那么在等待的过程中，24卡的资源就白白浪费了。</li>
+</ul>
+<p>那么有什么方法可以解决这种问题呢？实际上要从根本解决就是扩充公司硬件资源。但是在硬件资源一定的情况下，又要如何缓解这种问题？</p>
+<p>我这里有一个不太成熟的想法是这样的，简单来说：首先需要统计下每个人在N天得到一个实验结果需要多少卡。如果资源少，那么N在满足进度的前提下可以适当的大点，如果资源多，项目时间紧，那么N就适当的小一点。然后就设置某些卡的优先级让这个人在这些相应的卡的任务的优先级相较其他人都最高。如果这些卡没有人用，其他人需要跑任务的话，那么在按照最开始设定的排队策略来跑其他人的程序。</p>
+<p>上面的想法可以概括成，<strong>不同的GPU卡的优先级设置是不同的，组织规模的从大到小排序分别是：公司，院，部门，组，个人。那么个人先在自己的优先级卡先跑，如果不够则会占用同组的资源卡池，但是优先级会降一等，同组的不够就会尝试去占用同一部门的资源卡池，但是此时任务的优先级会在降一等</strong>。以此类推。通过这种方法来缓解资源占用不均匀的情况。比如上述的第一点，某一个人的任务运行比较快，频率高，那么他就会在自己的优先级卡时里面跑，想跑其他人的卡的话优先级就降了，而减少了对其他人的影响。又比如上述的第二点也是如此。</p>
+<p>当然这样做必然引入了其他的弊端。比如增加了维护和开发的成本等等。</p>
+<p>最后，我相信万物的发展规律一般都存在J字曲线，即 刚开始采取某个正确改变的时候，由于需要适应期，可能产出还不如之前已经习惯的策略。但是一旦熬过了这个阶段，那么改变的优势就会很好的体现出来。我们公司的目前就处在习惯的阶段，相信以后会越来越好。</p>
+<p>另外这种分配策略，用在其他资源上是不是也一样呢？在其他资源上是否存在共赢的局面，而非这种零和博弈的情况呢？以后有机会在好好思考一下。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-1-16/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1027,11 +1200,13 @@
             <h2 id="本博客包含以下三个部分，并不定期更新"><a href="#本博客包含以下三个部分，并不定期更新" class="headerlink" title="本博客包含以下三个部分，并不定期更新"></a>本博客包含以下三个部分，并不定期更新</h2><h3 id="1-DIY智能工坊（DIY-Inteligence-Factory）-："><a href="#1-DIY智能工坊（DIY-Inteligence-Factory）-：" class="headerlink" title="1. DIY智能工坊（DIY Inteligence Factory） ："></a>1. DIY智能工坊（DIY Inteligence Factory） ：</h3><p>– 介绍有趣的github 人工智能项目<br>– 介绍有趣或实用的3D 打印，机械设计和电子DIY作品</p>
 <h3 id="2-虚拟-增强现实（VR-amp-AR）："><a href="#2-虚拟-增强现实（VR-amp-AR）：" class="headerlink" title="2. 虚拟/增强现实（VR&amp;AR）："></a>2. 虚拟/增强现实（VR&amp;AR）：</h3><p>– 分享OpenVR学习教程 （软件）<br>– 分享unity3D的VR，AR游戏设计教程（软件）<br>– 分享DIY VR&amp;AR的外设制作教程（硬件）</p>
 <h3 id="3-享受生活-（Enjoy-Life）："><a href="#3-享受生活-（Enjoy-Life）：" class="headerlink" title="3. 享受生活 （Enjoy Life）："></a>3. 享受生活 （Enjoy Life）：</h3><p>– 进行厨艺分享，包括美食介绍和制作<br>– 旅行摄影杂谈，分享生活的所见所闻</p>
-<h3 id="4-阅读书籍分享："><a href="#4-阅读书籍分享：" class="headerlink" title="4.阅读书籍分享："></a>4.阅读书籍分享：</h3><h4 id="1-《算法引论》"><a href="#1-《算法引论》" class="headerlink" title="(1).《算法引论》"></a>(1).《算法引论》</h4><p>– 分享算法引论中的思考与感悟（每周一章的进度）</p>
-<h4 id="2-《English-for-Writing-Research-Paper》"><a href="#2-《English-for-Writing-Research-Paper》" class="headerlink" title="(2).《English for Writing Research Paper》"></a>(2).《English for Writing Research Paper》</h4><p>– 精简书籍中的要点，备查并提高自己的英语论文写作水平（每周1-3章的进度）</p>
-<h4 id="3-《人性的弱点》："><a href="#3-《人性的弱点》：" class="headerlink" title="(3)《人性的弱点》："></a>(3)《人性的弱点》：</h4><p>– 分享人际，沟通，职场相关的感悟（暂定）</p>
-<h4 id="2-《漫步华尔街》"><a href="#2-《漫步华尔街》" class="headerlink" title="(2).《漫步华尔街》"></a>(2).《漫步华尔街》</h4><p>– 投资，理财感悟的一些事（暂定）</p>
-<h3 id="每日感悟杂谈"><a href="#每日感悟杂谈" class="headerlink" title="每日感悟杂谈"></a>每日感悟杂谈</h3><p>– 总结每日收货和下次需要提高的点（每周3-5次）</p>
+<h3 id="4-阅读分享："><a href="#4-阅读分享：" class="headerlink" title="4.阅读分享："></a>4.阅读分享：</h3><h4 id="0-网络结构搜索-NAS-论文阅读分享"><a href="#0-网络结构搜索-NAS-论文阅读分享" class="headerlink" title="(0) 网络结构搜索(NAS)论文阅读分享"></a>(0) 网络结构搜索(NAS)论文阅读分享</h4><h4 id="1-《算法引论》"><a href="#1-《算法引论》" class="headerlink" title="(1).《算法引论》"></a>(1).《算法引论》</h4><p>– 分享算法引论中的思考与感悟</p>
+<h4 id="2-《English-for-Writing-Research-Paper》"><a href="#2-《English-for-Writing-Research-Paper》" class="headerlink" title="(2).《English for Writing Research Paper》"></a>(2).《English for Writing Research Paper》</h4><p>– 精简书籍中的要点，备查并提高自己的英语论文写作水平</p>
+<h4 id="3-《人性的弱点》："><a href="#3-《人性的弱点》：" class="headerlink" title="(3)《人性的弱点》："></a>(3)《人性的弱点》：</h4><p>– 分享人际，沟通，职场相关的感悟</p>
+<h4 id="4-《漫步华尔街》"><a href="#4-《漫步华尔街》" class="headerlink" title="(4).《漫步华尔街》"></a>(4).《漫步华尔街》</h4><p>– 投资，理财感悟的一些事</p>
+<h4 id="5-《学会提问》"><a href="#5-《学会提问》" class="headerlink" title="(5).《学会提问》"></a>(5).《学会提问》</h4><p>– 批判性思维锻炼的入门书总结</p>
+<h4 id="6-《从一到无穷大》"><a href="#6-《从一到无穷大》" class="headerlink" title="(6).《从一到无穷大》"></a>(6).《从一到无穷大》</h4><p>– 科普读物的感悟，提高对科学的兴趣</p>
+<h3 id="每日感悟杂谈"><a href="#每日感悟杂谈" class="headerlink" title="每日感悟杂谈"></a>每日感悟杂谈</h3><p>– 总结每日收货和下次需要提高的点</p>
 <!--![world](https://qcloud.coding.net/u/dlongry/p/blogResources/git/raw/master/hello-world/world.jpg)-->
 
           
@@ -1118,7 +1293,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
