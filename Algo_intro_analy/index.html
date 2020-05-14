@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ResearchPaper,">
+  <meta name="keywords" content="algorithm introduction,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="开始动笔前的准备与计划制定 请不要先写中文版初稿：很多第一次写英语论文的同学，发现写英语寸步难行，所以他们就想先写好中文版，然后在将中文版翻译成英文版。我自己亲身经历说明这样并不是好方案。书中提到一种较好的做法是这样的，先找一篇你领域相关引用较高，经典，由第一语言就是英语的人写的文章。然后将这拿这篇文章就为模板，模范它的文章结构，并可以先尝试一句一句的模仿他的写法和句式。 注意事项: 时间安排：:">
-<meta name="keywords" content="ResearchPaper">
+<meta name="description" content="本章内容概括算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。 大O符号和Ω符号:大O符号定义：  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。">
+<meta name="keywords" content="algorithm introduction">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Writing -1：Planning and Preparation">
-<meta property="og:url" content="http://yoursite.com/ResearchPaper_2_Preparation/index.html">
+<meta property="og:title" content="《算法导论》第三章：算法分析">
+<meta property="og:url" content="http://yoursite.com/Algo_intro_analy/index.html">
 <meta property="og:site_name" content="DlongRY">
-<meta property="og:description" content="开始动笔前的准备与计划制定 请不要先写中文版初稿：很多第一次写英语论文的同学，发现写英语寸步难行，所以他们就想先写好中文版，然后在将中文版翻译成英文版。我自己亲身经历说明这样并不是好方案。书中提到一种较好的做法是这样的，先找一篇你领域相关引用较高，经典，由第一语言就是英语的人写的文章。然后将这拿这篇文章就为模板，模范它的文章结构，并可以先尝试一句一句的模仿他的写法和句式。 注意事项: 时间安排：:">
+<meta property="og:description" content="本章内容概括算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。 大O符号和Ω符号:大O符号定义：  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-10T05:09:28.654Z">
+<meta property="og:updated_time" content="2020-05-14T23:19:22.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Writing -1：Planning and Preparation">
-<meta name="twitter:description" content="开始动笔前的准备与计划制定 请不要先写中文版初稿：很多第一次写英语论文的同学，发现写英语寸步难行，所以他们就想先写好中文版，然后在将中文版翻译成英文版。我自己亲身经历说明这样并不是好方案。书中提到一种较好的做法是这样的，先找一篇你领域相关引用较高，经典，由第一语言就是英语的人写的文章。然后将这拿这篇文章就为模板，模范它的文章结构，并可以先尝试一句一句的模仿他的写法和句式。 注意事项: 时间安排：:">
+<meta name="twitter:title" content="《算法导论》第三章：算法分析">
+<meta name="twitter:description" content="本章内容概括算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。 大O符号和Ω符号:大O符号定义：  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/ResearchPaper_2_Preparation/">
+  <link rel="canonical" href="http://yoursite.com/Algo_intro_analy/">
 
 
 
 
 
-  <title>Writing -1：Planning and Preparation | DlongRY</title>
+  <title>《算法导论》第三章：算法分析 | DlongRY</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/ResearchPaper_2_Preparation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro_analy/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dlong RY">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Writing -1：Planning and Preparation</h1>
+          <h1 class="post-title" itemprop="name headline">《算法导论》第三章：算法分析</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-11T22:08:00+08:00">
-                2020-03-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-18T22:08:00+08:00">
+                2020-01-18
               </time>
             
 
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/阅读书籍《Writing-Research-Papers》/" itemprop="url" rel="index">
-                    <span itemprop="name">阅读书籍《Writing Research Papers》</span>
+                  <a href="/categories/阅读书籍《算法导论》/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读书籍《算法导论》</span>
                   </a>
                 </span>
 
@@ -323,8 +323,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/ResearchPaper_2_Preparation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/ResearchPaper_2_Preparation/" itemprop="commentCount"></span>
+                <a href="/Algo_intro_analy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro_analy/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -332,7 +332,7 @@
 
           
           
-             <span id="/ResearchPaper_2_Preparation/" class="leancloud_visitors" data-flag-title="Writing -1：Planning and Preparation">
+             <span id="/Algo_intro_analy/" class="leancloud_visitors" data-flag-title="《算法导论》第三章：算法分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -363,67 +363,60 @@
       
 
       
-        <h3 id="开始动笔前的准备与计划制定"><a href="#开始动笔前的准备与计划制定" class="headerlink" title="开始动笔前的准备与计划制定"></a>开始动笔前的准备与计划制定</h3><ul>
-<li><strong>请不要先写中文版初稿</strong>：很多第一次写英语论文的同学，发现写英语寸步难行，所以他们就想先写好中文版，然后在将中文版翻译成英文版。我自己亲身经历说明这样并不是好方案。书中提到一种较好的做法是这样的，先找一篇你领域相关引用较高，经典，<strong><em>由第一语言就是英语的人写的文章</em></strong>。然后将这拿这篇文章就为模板，模范它的文章结构，并可以先尝试一句一句的模仿他的写法和句式。</li>
-<li><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项:"></a>注意事项:</h4></li>
-<li><strong>时间安排：</strong>: 通常我们要有至少一倍时间的富余量。特别是新手，往往刚开始的初稿和最后的定稿之间会修改十几版。所以时间上一定要充足。<strong>一般是两倍你计划用来写作的时间。</strong> 经过这次会议投稿，对于我来说一般会议论文的文章至少在三周前就要把论文初稿写完（后面三周是加班加点来修改才来得及）。</li>
+        <h3 id="本章内容概括"><a href="#本章内容概括" class="headerlink" title="本章内容概括"></a>本章内容概括</h3><p>算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。</p>
+<h3 id="大O符号和Ω符号"><a href="#大O符号和Ω符号" class="headerlink" title="大O符号和Ω符号:"></a>大O符号和Ω符号:</h3><h4 id="大O符号定义："><a href="#大O符号定义：" class="headerlink" title="大O符号定义："></a>大O符号定义：</h4><p>  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。首先，如果存在常数项c和N，使得对于所有的n&gt;=N,有g(n)&lt;=cf(n),则称函数g(n)相对于另一个函数f(n)是O(f(n)).从这个公式可以看出，对于足够大的n，函数g(n)不超过函数f(n)的一个固定倍数。函数g(n)可能比cf(n)小。符号O是从上限进行约束。</p>
+<h4 id="大O符号性质与常见推论："><a href="#大O符号性质与常见推论：" class="headerlink" title="大O符号性质与常见推论："></a>大O符号性质与常见推论：</h4><ul>
+<li>1.O中包含常数项没有意义，所以我们有O(n) 而不写诸如O(5n+4)</li>
+<li>2.对数不必写出底数，因为不同的底数，根据换底公式也只是常数项的区别，故写为O(logn)</li>
+<li>3.O(1) 用来表示常数项</li>
+<li>4.</li>
 </ul>
+<h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
 <ul>
-<li><strong>请时刻从评审员的角度去思考书写方式与内容：</strong> 这是刚刚写论文的初学者容易放的另一个错误。因为论文的评审员不一定是你这个细分领域的专家，而且都是抽空无偿的为你评审论文。所以你在写论文的时候一定要有这么一个想法：思考评审员会提问什么问题，然后就尝试去解释他，描述能简单就简单，<strong><em>能用图表示说明就不要用表格，排版尽量要工整</em></strong>，让人看起来比较易读。</li>
+<li>1.当n=1时，T成立</li>
+<li>2.对于任意的i&gt;1,如果n=i-1时T成立，可以推出n=i时，T也成立</li>
 </ul>
+<p>这里我们n=1的情况往往是比较好证明的，然后我们假设n-1时，T成立的条件，去推导出n时T也成立。这样就可以从n=1，推出n=2 T成立，从n=2，推出n=3成立，以此类推从而证明对于所有的n，T都成立。</p>
+<p>这里有个注意点：<strong>n为自然数</strong>，思考如果欲证明的自变量n不是自然数的定理T，是否可以使用数学归纳法呢？</p>
+<p>这个基本定义比较简单，就不举例说明了。</p>
+<h4 id="数学归纳法变种一："><a href="#数学归纳法变种一：" class="headerlink" title="数学归纳法变种一："></a>数学归纳法变种一：</h4><p>对于基本原理，用n和n+1 代替 n-1和n，那么可以很自然的有如下的变种：</p>
 <ul>
-<li><p><strong>各个章节书写顺序建议：</strong></p>
-<ul>
-<li><strong>摘要</strong>（Abstract）初稿</li>
-<li><strong>方法</strong>（Method）</li>
-<li><strong>实验结果</strong>（Result）</li>
-<li><strong>讨论</strong>(Discussion，有些领域可能没有这个部分)</li>
-<li><strong>介绍</strong>(Introduction)</li>
-<li><strong>总结</strong>（Conclusion）</li>
-<li><strong>摘要</strong> Abstract（最终版）<br>先写abstract 将帮助你聚焦于你论文的核心思想。将“结果和讨论”部分写在“介绍“之前是因为你先写完结果和讨论之后你才能对自己所做的工作有深刻的理解，有助于你在介绍中写明你这份论文的主要贡献。</li>
+<li>1.当n=1时，T成立。</li>
+<li>2.对于任意的i&gt;1,假设n=i时T成立，可以推出n=i+1时 T 也成立。那么T对于任意自然数都成立</li>
 </ul>
-</li>
-<li><p><strong>每个章节都应该对你的贡献有所联系：</strong> 注意所有章节都是为了描述你的贡献或者研究点而服务的，所以你要想办法如何在各个章节突出你的发现。你可以着力于思考如下几个问题：</p>
-<ul>
-<li>1.你试图去解决/研究的问题是什么</li>
-<li>2.你是如何解决/研究所提到的问题的。</li>
-<li>3.是什么使你的解决方法和以前的方法有所不同（方法对比）</li>
-<li>4.你的发现的内容和结果与现有的文献有什么区别（内容对比），你的结果或者内容的意义是什么。</li>
-</ul>
+<h4 id="数学归纳法变种二（强归纳假设）："><a href="#数学归纳法变种二（强归纳假设）：" class="headerlink" title="数学归纳法变种二（强归纳假设）："></a>数学归纳法变种二（强归纳假设）：</h4><ul>
+<li>1.n=1时,T成立</li>
+<li><p>2.如果对每个i(i&gt;1), 假设自然数m是任意的小于i的值，当n=m时T都成立。能够推出n=i时，T也成立。那么可以证明T对于任意自然数都成立。</p>
+<p>可以看出，由于这里的假设条件变强了，是n等于小于i的值都假设P能成立。而基本的归纳假设紧紧是n=i-1时，假设T成立，是强归纳假设的其中一个子假设。故名为强归纳法。而这个变种成立也是显而易见的，n=2时，由于n=1成立，所以n=2成立。n=3时，由于n=1，2成立，所以n=3成立。以此类推。</p>
 </li>
 </ul>
-<h4 id="动笔论文前的准备工作"><a href="#动笔论文前的准备工作" class="headerlink" title="动笔论文前的准备工作"></a>动笔论文前的准备工作</h4><ul>
-<li><p><strong>下载会议模板：</strong> 先假定你已经有了目标期刊或者会议. 那么第一步就是去下载它的 “instructions for authors”。(可能名字会有所不同：notes for authors，author guidelines等等)。这里面一般是latex或者word模板文件。这个模板文件明确写明了各个部分的具体格式，和一些注意事项。</p>
-</li>
-<li><p><strong>阅读前人的工作：</strong> 看下相关领域的文章，重点找出与你文章高度相关其他论文，建议可以从以下问题分析总结各个文章：</p>
+<h4 id="数学归纳法变种三（分块归纳法）"><a href="#数学归纳法变种三（分块归纳法）" class="headerlink" title="数学归纳法变种三（分块归纳法）:"></a>数学归纳法变种三（分块归纳法）:</h4><ul>
+<li>1.n=1时，T成立。 n=2时，T成立。</li>
+<li>2.如果对每一个n(n&gt;2),若n-2时，T成立能够推出n时 T也成立; 那么对于任意自然数，T都成立。</li>
+</ul>
+<p>这个归纳法可以将自然数分为奇数偶数的情况来证明，当n=1时成立，n-2假设成立，可以推出n=3成立，即奇数都成立；同样n=2时成立，n-2假设成立，推出n=4成立，偶数都成立。所以所有自然数都成立。</p>
+<p>注意：既然是分块归纳，那么<strong>分块</strong>的方式会根据具体所证明内容而发生变化。相对应的<strong>证明要求也不一定是所有自然数</strong>，有可能是分块后的整数。例如上面的单独证明奇数或者偶数。如下面是常见的一种数学归纳法的证明：</p>
 <ul>
-<li>(1).这篇文章解决了什么问题。</li>
-<li>(2).背景信息与其引用的参考文献。</li>
-<li>(3).作者是如何证明文章的原创程度的。</li>
-<li>(4).文章思考的过程，方法或者其概念模型。</li>
-<li>(5)部分领域可能对实验的材料，装备和软件的时间也有比较关注，如果需要也要总结。</li>
-<li>(6).文章使用了什么实验方法（比如消融）和实验执行的步骤。</li>
-<li>(7).达到的实验结果。</li>
-<li>(8).文中是如何分析和解释实验结果的。</li>
-<li>(9).这个研究的优点和缺点。</li>
-<li>(10).对未来研究的启示与帮助。经过这些问题去梳理相关文章，为后期写introduction和relation work 提供帮助。</li>
+<li>1.n=1时，T成立</li>
+<li>2.n(n&gt;1 且 为2的整数幂)，假设 n/2时命题T成立，可以推出n命题P也成立，那么对任意一个2的整数幂的自然数，T都成立。</li>
 </ul>
-</li>
-<li><p><strong>重新审视自己的贡献：</strong> 由于你准备写论文了，肯定是在现有的知识体系下认为自己的文章有所贡献。但是经过再次阅读和整理前人的工作后，你必须要明确如下几个问题：</p>
+<h3 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h3><h4 id="归纳技巧1：通过特例得到假设，并用归纳法证明："><a href="#归纳技巧1：通过特例得到假设，并用归纳法证明：" class="headerlink" title="归纳技巧1：通过特例得到假设，并用归纳法证明："></a>归纳技巧1：通过特例得到假设，并用归纳法证明：</h4><p>例子如下：假设要计算和T(n) = 8+13+18+23+…+(3+5n), 如何有效进行使用数学归纳法：</p>
 <ul>
-<li>你的研究的目的</li>
-<li>你最重要的发现是什么，如何去证明发现是对的</li>
-<li>你的发现和前人的工作有什么不同。或者如何和前人的工作相联系。</li>
-<li>你必须明确你这个研究所解决的核心问题，这个问题你可能为之花费了很长时间，但是读者并不知道，你需要传递这个信息。</li>
+<li>1.通过特例找到假设：根据1+2+3+4…+n的数列的和为$n^2/2+n/2$ 与题目的序列是同一个幂级数级别，不防假设T(n) 也满足二次多项式表示 $G(n) = c1 \times n^2+c2 \times n + c3$ 通过n=0，n=1，n=2的特例，带入G(n) 解决方程组，获得c1，c2，c3<br>分别我2.5，5.5,0.所以得到假设$ T(n) = 2.5n^2+5.5n$</li>
+<li>2.通过数学归纳法证明此假设。</li>
 </ul>
-</li>
-</ul>
+<h4 id="归纳技巧2：多多运用等价证明"><a href="#归纳技巧2：多多运用等价证明" class="headerlink" title="归纳技巧2：多多运用等价证明"></a>归纳技巧2：多多运用等价证明</h4><p>例子：任意两条不平行，任意三条不想交的n条直线，试用归纳法证明，其会将平面划分成n(n+1)/2+1。直接使用归纳假设时比较困难的额，我们可以通过特例推导将问题归约成：证明：添加第n条直线，可以增加n个区域。<br>所以证明变为：</p>
 <ul>
-<li><p><strong>选择一篇模板文章开始编写初稿:</strong> 如注意事项说所选择一篇由第一语言为英语的作者写的高引用文章作为模板，根据注意事项中的书写顺序开始编写各个部分内容。编写内容的时候，时刻不要忘记注意事项提到的一些建议。</p>
-</li>
-<li><p><strong>修改论文：找专业人士修改和非相关领域的人交谈</strong> 不断的修改初稿是很关键的，如果有条件你可以找英语本土的语言者，帮你修改论文提点意见。你可以将你的论文给非相关领域的朋友，同事看。问下哪里表述不够清楚，没有理解。然后进行针对性的修改。</p>
-</li>
+<li>假设第n条直线，使得平面增加了n个区域，去证明添加第n+1条直线，使得平面增加了n+1个区域</li>
 </ul>
+<h4 id="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系"><a href="#归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系" class="headerlink" title="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系"></a>归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系</h4><p>如技巧2中的例子，如何从第n条直线使得平面增加了n个区域，推导出第n+1条直线，平面增加n+1个区域呢？假设没有第n条直线，直接放入第n+1条直线，根据假设，应该也只是添加了n个区域，所以第n条直线的加入，使得第n+1条直线多分出了一个区域。故证明可以变为：</p>
+<ul>
+<li>第n条直线的存在使得第n+1条直线多分割了一个区域。</li>
+</ul>
+<h3 id="数学归纳法常见错误："><a href="#数学归纳法常见错误：" class="headerlink" title="数学归纳法常见错误："></a>数学归纳法常见错误：</h3><h4 id="1-忽略的假设条件："><a href="#1-忽略的假设条件：" class="headerlink" title="1.忽略的假设条件："></a>1.忽略的假设条件：</h4><p>举例来说：要证明的定理的图只被假设成连通的，在证明过程中却忘了在图的变减少后检验图的连通性。这导致了归纳假设的错误。所以准确定义归纳假设时十分重要的。</p>
+<h4 id="2-从假设n到n-1中，n-1的情况必须是任意的。"><a href="#2-从假设n到n-1中，n-1的情况必须是任意的。" class="headerlink" title="2.从假设n到n+1中，n+1的情况必须是任意的。"></a>2.从假设n到n+1中，n+1的情况必须是任意的。</h4><p>即在n+1的时候，你不能使用特殊情况的n+1来进行推理。比如在图形归纳假设的问题中，n+1条直线的位置不能是有特殊性质的。而你推论的时候把它放在了特殊位置来进行推理</p>
+<h4 id="3-证明过程，忽略了的基本n-1，n-2情况的验证。"><a href="#3-证明过程，忽略了的基本n-1，n-2情况的验证。" class="headerlink" title="3.证明过程，忽略了的基本n=1，n=2情况的验证。"></a>3.证明过程，忽略了的基本n=1，n=2情况的验证。</h4><p>有些命题在推论过程中需要的是n要大于3，甚至n要大于比较大的数才成立。而你只是验证了n=1的情况显然成立。那么就会导致错误的推论。</p>
+<p>(我会专门建立的一个习题解的blog，但是是逐步更新的，我会把解题思路写上，如果需要，可以参考观看，有错误欢迎提出。)</p>
 
       
     </div>
@@ -441,7 +434,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ResearchPaper/" rel="tag"># ResearchPaper</a>
+            <a href="/tags/algorithm-introduction/" rel="tag"># algorithm introduction</a>
           
         </div>
       
@@ -454,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020-3-10/" rel="next" title="浅谈断层的逻辑">
-                <i class="fa fa-chevron-left"></i> 浅谈断层的逻辑
+              <a href="/Algo_intro/" rel="next" title="《算法导论》第二章：数学归纳法">
+                <i class="fa fa-chevron-left"></i> 《算法导论》第二章：数学归纳法
               </a>
             
           </div>
@@ -464,8 +457,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/ResearchPaper_1/" rel="prev" title="Writing Research Papers">
-                Writing Research Papers <i class="fa fa-chevron-right"></i>
+              <a href="/RandWalkStree_1/" rel="prev" title="漫步华尔街第一章">
+                漫步华尔街第一章 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -601,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#开始动笔前的准备与计划制定"><span class="nav-number">1.</span> <span class="nav-text">开始动笔前的准备与计划制定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意事项"><span class="nav-number">1.1.</span> <span class="nav-text">注意事项:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动笔论文前的准备工作"><span class="nav-number">1.2.</span> <span class="nav-text">动笔论文前的准备工作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本章内容概括"><span class="nav-number">1.</span> <span class="nav-text">本章内容概括</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#大O符号和Ω符号"><span class="nav-number">2.</span> <span class="nav-text">大O符号和Ω符号:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#大O符号定义："><span class="nav-number">2.1.</span> <span class="nav-text">大O符号定义：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#大O符号性质与常见推论："><span class="nav-number">2.2.</span> <span class="nav-text">大O符号性质与常见推论：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数学归纳法基本原理"><span class="nav-number">2.3.</span> <span class="nav-text">数学归纳法基本原理:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数学归纳法变种一："><span class="nav-number">2.4.</span> <span class="nav-text">数学归纳法变种一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数学归纳法变种二（强归纳假设）："><span class="nav-number">2.5.</span> <span class="nav-text">数学归纳法变种二（强归纳假设）：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数学归纳法变种三（分块归纳法）"><span class="nav-number">2.6.</span> <span class="nav-text">数学归纳法变种三（分块归纳法）:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用："><span class="nav-number">3.</span> <span class="nav-text">应用：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#归纳技巧1：通过特例得到假设，并用归纳法证明："><span class="nav-number">3.1.</span> <span class="nav-text">归纳技巧1：通过特例得到假设，并用归纳法证明：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归纳技巧2：多多运用等价证明"><span class="nav-number">3.2.</span> <span class="nav-text">归纳技巧2：多多运用等价证明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系"><span class="nav-number">3.3.</span> <span class="nav-text">归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数学归纳法常见错误："><span class="nav-number">4.</span> <span class="nav-text">数学归纳法常见错误：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-忽略的假设条件："><span class="nav-number">4.1.</span> <span class="nav-text">1.忽略的假设条件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-从假设n到n-1中，n-1的情况必须是任意的。"><span class="nav-number">4.2.</span> <span class="nav-text">2.从假设n到n+1中，n+1的情况必须是任意的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-证明过程，忽略了的基本n-1，n-2情况的验证。"><span class="nav-number">4.3.</span> <span class="nav-text">3.证明过程，忽略了的基本n=1，n=2情况的验证。</span></a></li></ol></li></ol></div>
             
 
           </div>

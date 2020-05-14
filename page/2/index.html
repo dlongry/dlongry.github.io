@@ -414,6 +414,433 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro_analy/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dlong RY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DlongRY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Algo_intro_analy/" itemprop="url">《算法导论》第三章：算法分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-18T22:08:00+08:00">
+                2020-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/阅读书籍《算法导论》/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读书籍《算法导论》</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Algo_intro_analy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro_analy/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Algo_intro_analy/" class="leancloud_visitors" data-flag-title="《算法导论》第三章：算法分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="本章内容概括"><a href="#本章内容概括" class="headerlink" title="本章内容概括"></a>本章内容概括</h3><p>算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。</p>
+<h3 id="大O符号和Ω符号"><a href="#大O符号和Ω符号" class="headerlink" title="大O符号和Ω符号:"></a>大O符号和Ω符号:</h3><h4 id="大O符号定义："><a href="#大O符号定义：" class="headerlink" title="大O符号定义："></a>大O符号定义：</h4><p>  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。首先，如果存在常数项c和N，使得对于所有的n&gt;=N,有g(n)&lt;=cf(n),则称函数g(n)相对于另一个函数f(n)是O(f(n)).从这个公式可以看出，对于足够大的n，函数g(n)不超过函数f(n)的一个固定倍数。函数g(n)可能比cf(n)小。符号O是从上限进行约束。</p>
+<h4 id="大O符号性质与常见推论："><a href="#大O符号性质与常见推论：" class="headerlink" title="大O符号性质与常见推论："></a>大O符号性质与常见推论：</h4><ul>
+<li>1.O中包含常数项没有意义，所以我们有O(n) 而不写诸如O(5n+4)</li>
+<li>2.对数不必写出底数，因为不同的底数，根据换底公式也只是常数项的区别，故写为O(logn)</li>
+<li>3.O(1) 用来表示常数项</li>
+<li>4.</li>
+</ul>
+<h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
+<ul>
+<li>1.当n=1时，T成立</li>
+<li>2.对于任意的i&gt;1,如果n=i-1时T成立，可以推出n=i时，T也成立</li>
+</ul>
+<p>这里我们n=1的情况往往是比较好证明的，然后我们假设n-1时，T成立的条件，去推导出n时T也成立。这样就可以从n=1，推出n=2 T成立，从n=2，推出n=3成立，以此类推从而证明对于所有的n，T都成立。</p>
+<p>这里有个注意点：<strong>n为自然数</strong>，思考如果欲证明的自变量n不是自然数的定理T，是否可以使用数学归纳法呢？</p>
+<p>这个基本定义比较简单，就不举例说明了。</p>
+<h4 id="数学归纳法变种一："><a href="#数学归纳法变种一：" class="headerlink" title="数学归纳法变种一："></a>数学归纳法变种一：</h4><p>对于基本原理，用n和n+1 代替 n-1和n，那么可以很自然的有如下的变种：</p>
+<ul>
+<li>1.当n=1时，T成立。</li>
+<li>2.对于任意的i&gt;1,假设n=i时T成立，可以推出n=i+1时 T 也成立。那么T对于任意自然数都成立</li>
+</ul>
+<h4 id="数学归纳法变种二（强归纳假设）："><a href="#数学归纳法变种二（强归纳假设）：" class="headerlink" title="数学归纳法变种二（强归纳假设）："></a>数学归纳法变种二（强归纳假设）：</h4><ul>
+<li>1.n=1时,T成立</li>
+<li><p>2.如果对每个i(i&gt;1), 假设自然数m是任意的小于i的值，当n=m时T都成立。能够推出n=i时，T也成立。那么可以证明T对于任意自然数都成立。</p>
+<p>可以看出，由于这里的假设条件变强了，是n等于小于i的值都假设P能成立。而基本的归纳假设紧紧是n=i-1时，假设T成立，是强归纳假设的其中一个子假设。故名为强归纳法。而这个变种成立也是显而易见的，n=2时，由于n=1成立，所以n=2成立。n=3时，由于n=1，2成立，所以n=3成立。以此类推。</p>
+</li>
+</ul>
+<h4 id="数学归纳法变种三（分块归纳法）"><a href="#数学归纳法变种三（分块归纳法）" class="headerlink" title="数学归纳法变种三（分块归纳法）:"></a>数学归纳法变种三（分块归纳法）:</h4><ul>
+<li>1.n=1时，T成立。 n=2时，T成立。</li>
+<li>2.如果对每一个n(n&gt;2),若n-2时，T成立能够推出n时 T也成立; 那么对于任意自然数，T都成立。</li>
+</ul>
+<p>这个归纳法可以将自然数分为奇数偶数的情况来证明，当n=1时成立，n-2假设成立，可以推出n=3成立，即奇数都成立；同样n=2时成立，n-2假设成立，推出n=4成立，偶数都成立。所以所有自然数都成立。</p>
+<p>注意：既然是分块归纳，那么<strong>分块</strong>的方式会根据具体所证明内容而发生变化。相对应的<strong>证明要求也不一定是所有自然数</strong>，有可能是分块后的整数。例如上面的单独证明奇数或者偶数。如下面是常见的一种数学归纳法的证明：</p>
+<ul>
+<li>1.n=1时，T成立</li>
+<li>2.n(n&gt;1 且 为2的整数幂)，假设 n/2时命题T成立，可以推出n命题P也成立，那么对任意一个2的整数幂的自然数，T都成立。</li>
+</ul>
+<h3 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h3><h4 id="归纳技巧1：通过特例得到假设，并用归纳法证明："><a href="#归纳技巧1：通过特例得到假设，并用归纳法证明：" class="headerlink" title="归纳技巧1：通过特例得到假设，并用归纳法证明："></a>归纳技巧1：通过特例得到假设，并用归纳法证明：</h4><p>例子如下：假设要计算和T(n) = 8+13+18+23+…+(3+5n), 如何有效进行使用数学归纳法：</p>
+<ul>
+<li>1.通过特例找到假设：根据1+2+3+4…+n的数列的和为$n^2/2+n/2$ 与题目的序列是同一个幂级数级别，不防假设T(n) 也满足二次多项式表示 $G(n) = c1 \times n^2+c2 \times n + c3$ 通过n=0，n=1，n=2的特例，带入G(n) 解决方程组，获得c1，c2，c3<br>分别我2.5，5.5,0.所以得到假设$ T(n) = 2.5n^2+5.5n$</li>
+<li>2.通过数学归纳法证明此假设。</li>
+</ul>
+<h4 id="归纳技巧2：多多运用等价证明"><a href="#归纳技巧2：多多运用等价证明" class="headerlink" title="归纳技巧2：多多运用等价证明"></a>归纳技巧2：多多运用等价证明</h4><p>例子：任意两条不平行，任意三条不想交的n条直线，试用归纳法证明，其会将平面划分成n(n+1)/2+1。直接使用归纳假设时比较困难的额，我们可以通过特例推导将问题归约成：证明：添加第n条直线，可以增加n个区域。<br>所以证明变为：</p>
+<ul>
+<li>假设第n条直线，使得平面增加了n个区域，去证明添加第n+1条直线，使得平面增加了n+1个区域</li>
+</ul>
+<h4 id="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系"><a href="#归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系" class="headerlink" title="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系"></a>归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系</h4><p>如技巧2中的例子，如何从第n条直线使得平面增加了n个区域，推导出第n+1条直线，平面增加n+1个区域呢？假设没有第n条直线，直接放入第n+1条直线，根据假设，应该也只是添加了n个区域，所以第n条直线的加入，使得第n+1条直线多分出了一个区域。故证明可以变为：</p>
+<ul>
+<li>第n条直线的存在使得第n+1条直线多分割了一个区域。</li>
+</ul>
+<h3 id="数学归纳法常见错误："><a href="#数学归纳法常见错误：" class="headerlink" title="数学归纳法常见错误："></a>数学归纳法常见错误：</h3><h4 id="1-忽略的假设条件："><a href="#1-忽略的假设条件：" class="headerlink" title="1.忽略的假设条件："></a>1.忽略的假设条件：</h4><p>举例来说：要证明的定理的图只被假设成连通的，在证明过程中却忘了在图的变减少后检验图的连通性。这导致了归纳假设的错误。所以准确定义归纳假设时十分重要的。</p>
+<h4 id="2-从假设n到n-1中，n-1的情况必须是任意的。"><a href="#2-从假设n到n-1中，n-1的情况必须是任意的。" class="headerlink" title="2.从假设n到n+1中，n+1的情况必须是任意的。"></a>2.从假设n到n+1中，n+1的情况必须是任意的。</h4><p>即在n+1的时候，你不能使用特殊情况的n+1来进行推理。比如在图形归纳假设的问题中，n+1条直线的位置不能是有特殊性质的。而你推论的时候把它放在了特殊位置来进行推理</p>
+<h4 id="3-证明过程，忽略了的基本n-1，n-2情况的验证。"><a href="#3-证明过程，忽略了的基本n-1，n-2情况的验证。" class="headerlink" title="3.证明过程，忽略了的基本n=1，n=2情况的验证。"></a>3.证明过程，忽略了的基本n=1，n=2情况的验证。</h4><p>有些命题在推论过程中需要的是n要大于3，甚至n要大于比较大的数才成立。而你只是验证了n=1的情况显然成立。那么就会导致错误的推论。</p>
+<p>(我会专门建立的一个习题解的blog，但是是逐步更新的，我会把解题思路写上，如果需要，可以参考观看，有错误欢迎提出。)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dlong RY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DlongRY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Algo_intro/" itemprop="url">《算法导论》第二章：数学归纳法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-18T22:08:00+08:00">
+                2020-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/阅读书籍《算法导论》/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读书籍《算法导论》</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Algo_intro/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Algo_intro/" class="leancloud_visitors" data-flag-title="《算法导论》第二章：数学归纳法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="第一章的简要介绍"><a href="#第一章的简要介绍" class="headerlink" title="第一章的简要介绍"></a>第一章的简要介绍</h3><p>第一章的内容比较简洁，这里简单提一下。首先在第一章中，作者简单概括了算法设计的基本步骤，分别是：设计，正确性证明，分析和实现。而本书主要集中于讨论第一个阶段，即设计。另外作者在第一章中也明确说明了本书主要讲明数学归纳法的思想在算法设计中的作用。并提前告知了虽然并非所有算法设计都可以基于数学归纳法进行解决，但是绝大数算法可以从数学归纳法作为切入点进行思考。那么接下来第二章的内容就是讲述常见的数学归纳法了。</p>
+<p>(OK,这里我们需要留着一个问题去读书籍：既然并非所有算法都适合数学归纳法，那么什么时候适合用数学归纳法分析，什么时候不合适。是否有好的判别方法呢？)</p>
+<h3 id="第二章数学归纳法"><a href="#第二章数学归纳法" class="headerlink" title="第二章数学归纳法:"></a>第二章数学归纳法:</h3><p><img src="https://gitee.com/dlongry/blog_image/raw/master/img/20200426075657.png" alt=""></p>
+<h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
+<ul>
+<li>1.当n=1时，T成立</li>
+<li>2.对于任意的i&gt;1,如果n=i-1时T成立，可以推出n=i时，T也成立</li>
+</ul>
+<p>这里我们n=1的情况往往是比较好证明的，然后我们假设n-1时，T成立的条件，去推导出n时T也成立。这样就可以从n=1，推出n=2 T成立，从n=2，推出n=3成立，以此类推从而证明对于所有的n，T都成立。</p>
+<p>这里有个注意点：<strong>n为自然数</strong>，思考如果欲证明的自变量n不是自然数的定理T，是否可以使用数学归纳法呢？</p>
+<p>这个基本定义比较简单，就不举例说明了。</p>
+<h4 id="数学归纳法变种一："><a href="#数学归纳法变种一：" class="headerlink" title="数学归纳法变种一："></a>数学归纳法变种一：</h4><p>对于基本原理，用n和n+1 代替 n-1和n，那么可以很自然的有如下的变种：</p>
+<ul>
+<li>1.当n=1时，T成立。</li>
+<li>2.对于任意的i&gt;1,假设n=i时T成立，可以推出n=i+1时 T 也成立。那么T对于任意自然数都成立</li>
+</ul>
+<h4 id="数学归纳法变种二（强归纳假设）："><a href="#数学归纳法变种二（强归纳假设）：" class="headerlink" title="数学归纳法变种二（强归纳假设）："></a>数学归纳法变种二（强归纳假设）：</h4><ul>
+<li>1.n=1时,T成立</li>
+<li><p>2.如果对每个i(i&gt;1), 假设自然数m是任意的小于i的值，当n=m时T都成立。能够推出n=i时，T也成立。那么可以证明T对于任意自然数都成立。</p>
+<p>可以看出，由于这里的假设条件变强了，是n等于小于i的值都假设P能成立。而基本的归纳假设紧紧是n=i-1时，假设T成立，是强归纳假设的其中一个子假设。故名为强归纳法。而这个变种成立也是显而易见的，n=2时，由于n=1成立，所以n=2成立。n=3时，由于n=1，2成立，所以n=3成立。以此类推。</p>
+</li>
+</ul>
+<h4 id="数学归纳法变种三（分块归纳法）"><a href="#数学归纳法变种三（分块归纳法）" class="headerlink" title="数学归纳法变种三（分块归纳法）:"></a>数学归纳法变种三（分块归纳法）:</h4><ul>
+<li>1.n=1时，T成立。 n=2时，T成立。</li>
+<li>2.如果对每一个n(n&gt;2),若n-2时，T成立能够推出n时 T也成立; 那么对于任意自然数，T都成立。</li>
+</ul>
+<p>这个归纳法可以将自然数分为奇数偶数的情况来证明，当n=1时成立，n-2假设成立，可以推出n=3成立，即奇数都成立；同样n=2时成立，n-2假设成立，推出n=4成立，偶数都成立。所以所有自然数都成立。</p>
+<p>注意：既然是分块归纳，那么<strong>分块</strong>的方式会根据具体所证明内容而发生变化。相对应的<strong>证明要求也不一定是所有自然数</strong>，有可能是分块后的整数。例如上面的单独证明奇数或者偶数。如下面是常见的一种数学归纳法的证明：</p>
+<ul>
+<li>1.n=1时，T成立</li>
+<li>2.n(n&gt;1 且 为2的整数幂)，假设 n/2时命题T成立，可以推出n命题P也成立，那么对任意一个2的整数幂的自然数，T都成立。</li>
+</ul>
+<h3 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h3><h4 id="归纳技巧1：通过特例得到假设，并用归纳法证明："><a href="#归纳技巧1：通过特例得到假设，并用归纳法证明：" class="headerlink" title="归纳技巧1：通过特例得到假设，并用归纳法证明："></a>归纳技巧1：通过特例得到假设，并用归纳法证明：</h4><p>例子如下：假设要计算和T(n) = 8+13+18+23+…+(3+5n), 如何有效进行使用数学归纳法：</p>
+<ul>
+<li>1.通过特例找到假设：根据1+2+3+4…+n的数列的和为$n^2/2+n/2$ 与题目的序列是同一个幂级数级别，不防假设T(n) 也满足二次多项式表示 $G(n) = c1 \times n^2+c2 \times n + c3$ 通过n=0，n=1，n=2的特例，带入G(n) 解决方程组，获得c1，c2，c3<br>分别我2.5，5.5,0.所以得到假设$ T(n) = 2.5n^2+5.5n$</li>
+<li>2.通过数学归纳法证明此假设。</li>
+</ul>
+<h4 id="归纳技巧2：多多运用等价证明"><a href="#归纳技巧2：多多运用等价证明" class="headerlink" title="归纳技巧2：多多运用等价证明"></a>归纳技巧2：多多运用等价证明</h4><p>例子：任意两条不平行，任意三条不想交的n条直线，试用归纳法证明，其会将平面划分成n(n+1)/2+1。直接使用归纳假设时比较困难的额，我们可以通过特例推导将问题归约成：证明：添加第n条直线，可以增加n个区域。<br>所以证明变为：</p>
+<ul>
+<li>假设第n条直线，使得平面增加了n个区域，去证明添加第n+1条直线，使得平面增加了n+1个区域</li>
+</ul>
+<h4 id="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系"><a href="#归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系" class="headerlink" title="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系"></a>归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系</h4><p>如技巧2中的例子，如何从第n条直线使得平面增加了n个区域，推导出第n+1条直线，平面增加n+1个区域呢？假设没有第n条直线，直接放入第n+1条直线，根据假设，应该也只是添加了n个区域，所以第n条直线的加入，使得第n+1条直线多分出了一个区域。故证明可以变为：</p>
+<ul>
+<li>第n条直线的存在使得第n+1条直线多分割了一个区域。</li>
+</ul>
+<h3 id="数学归纳法常见错误："><a href="#数学归纳法常见错误：" class="headerlink" title="数学归纳法常见错误："></a>数学归纳法常见错误：</h3><h4 id="1-忽略的假设条件："><a href="#1-忽略的假设条件：" class="headerlink" title="1.忽略的假设条件："></a>1.忽略的假设条件：</h4><p>举例来说：要证明的定理的图只被假设成连通的，在证明过程中却忘了在图的变减少后检验图的连通性。这导致了归纳假设的错误。所以准确定义归纳假设时十分重要的。</p>
+<h4 id="2-从假设n到n-1中，n-1的情况必须是任意的。"><a href="#2-从假设n到n-1中，n-1的情况必须是任意的。" class="headerlink" title="2.从假设n到n+1中，n+1的情况必须是任意的。"></a>2.从假设n到n+1中，n+1的情况必须是任意的。</h4><p>即在n+1的时候，你不能使用特殊情况的n+1来进行推理。比如在图形归纳假设的问题中，n+1条直线的位置不能是有特殊性质的。而你推论的时候把它放在了特殊位置来进行推理</p>
+<h4 id="3-证明过程，忽略了的基本n-1，n-2情况的验证。"><a href="#3-证明过程，忽略了的基本n-1，n-2情况的验证。" class="headerlink" title="3.证明过程，忽略了的基本n=1，n=2情况的验证。"></a>3.证明过程，忽略了的基本n=1，n=2情况的验证。</h4><p>有些命题在推论过程中需要的是n要大于3，甚至n要大于比较大的数才成立。而你只是验证了n=1的情况显然成立。那么就会导致错误的推论。</p>
+<p>(我会专门建立的一个习题解的blog，但是是逐步更新的，我会把解题思路写上，如果需要，可以参考观看，有错误欢迎提出。)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-1-17/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1041,9 +1468,9 @@
       
         
           
-            <h3 id="2020-1-13："><a href="#2020-1-13：" class="headerlink" title="2020-1-13："></a>2020-1-13：</h3><p>  – 今天早上：开了组会，报告了上一周的内容，其中深刻体会到了一点，就是自己所报导的事情，领导并不是很关注，反而自己觉得次要的地方，领导进行细节询问。结果由于自己不重视，细节的提问也没有回答上来。所以从这里我复盘了一下，得出了两个可以改进的地方：首先是：领导并没有意识到我工作的重要性，或者说目的，可能需要在报告中详细提出，让领导觉得上周内容有进步并且有价值。另一个问题是：<strong>我并不知道领导最近在思考，公司最近最需要解决的问题是什么？所以这样使我思考的方向，判断工作内容的重要程度的评价方法和领导有所偏差，以后需要和领导多沟通，并了解公司具体需要哪些问题进行解决</strong>。</p>
-<p>  –今天下午：进行了专利的修改，发现写专利的话，并不是有一个点创新，写清楚就可以。你需要写的是你解决问题的一整套方案。所以你必须写清楚每个步骤，即使有些步骤不是你要保护的权利要求。另外，专利的上位虽然是交给专利代理人的，但是你也需要自己进行相关的上位，专利代理人写完初稿会叫你进行修改，主要查看自己保护的点是否都在专利保护范围，是否有一些细节没有写清楚，或者写的太清楚。是否存在现有方法无效掉专利的情况等。今天自己修改完专利后，找了主管进行审阅，<strong>发现自己看的还是不够仔细，重点看权利要求，需要进行每个句子和词的仔细揣摩，判断当前词是否有歧义等</strong>。而且发现有些词的理解你和代理人是存在区别的，你觉得可能存在歧义，但是代理人觉得不会有，这个时候，我的做法是听代理人的。但是也不知道这样做是好还是坏。</p>
-<p>  –今天晚上：最近正在忙着做论文的实验，但是实验结果却不是很理想，之前认为在随机采集的数据集上进行测量的结果，性能很好。但是今天发现几个数据上体现的误差极大。这说明之前的实验的论证实际上是存在不妥的地方的。测试集无法很好的验证模型在各个样本上的性能。那么一样，我们需要先进行问题的定位，实验结果查无非是如下几个条件不满足造成的实验结果:</p>
+            <h3 id="2020-1-13："><a href="#2020-1-13：" class="headerlink" title="2020-1-13："></a>2020-1-13：</h3><p>  — 今天早上：开了组会，报告了上一周的内容，其中深刻体会到了一点，就是自己所报导的事情，领导并不是很关注，反而自己觉得次要的地方，领导进行细节询问。结果由于自己不重视，细节的提问也没有回答上来。所以从这里我复盘了一下，得出了两个可以改进的地方：首先是：领导并没有意识到我工作的重要性，或者说目的，可能需要在报告中详细提出，让领导觉得上周内容有进步并且有价值。另一个问题是：<strong>我并不知道领导最近在思考，公司最近最需要解决的问题是什么？所以这样使我思考的方向，判断工作内容的重要程度的评价方法和领导有所偏差，以后需要和领导多沟通，并了解公司具体需要哪些问题进行解决</strong>。</p>
+<p>  —今天下午：进行了专利的修改，发现写专利的话，并不是有一个点创新，写清楚就可以。你需要写的是你解决问题的一整套方案。所以你必须写清楚每个步骤，即使有些步骤不是你要保护的权利要求。另外，专利的上位虽然是交给专利代理人的，但是你也需要自己进行相关的上位，专利代理人写完初稿会叫你进行修改，主要查看自己保护的点是否都在专利保护范围，是否有一些细节没有写清楚，或者写的太清楚。是否存在现有方法无效掉专利的情况等。今天自己修改完专利后，找了主管进行审阅，<strong>发现自己看的还是不够仔细，重点看权利要求，需要进行每个句子和词的仔细揣摩，判断当前词是否有歧义等</strong>。而且发现有些词的理解你和代理人是存在区别的，你觉得可能存在歧义，但是代理人觉得不会有，这个时候，我的做法是听代理人的。但是也不知道这样做是好还是坏。</p>
+<p>  —今天晚上：最近正在忙着做论文的实验，但是实验结果却不是很理想，之前认为在随机采集的数据集上进行测量的结果，性能很好。但是今天发现几个数据上体现的误差极大。这说明之前的实验的论证实际上是存在不妥的地方的。测试集无法很好的验证模型在各个样本上的性能。那么一样，我们需要先进行问题的定位，实验结果查无非是如下几个条件不满足造成的实验结果:</p>
 <ul>
 <li><strong>算法本身问题</strong>：是否是因为算法有效的前提条件本身不满足</li>
 <li><strong>数据输入的问题</strong>：是否是因为数据集采集不全面，和训练数据分布差异过大</li>
@@ -1052,176 +1479,11 @@
 <p>明天从这四个方向好好确定下问题所在，在根据问题进一步的改进。</p>
 </li>
 </ul>
-<p>–今天深夜：听了大咖的一些阅读分享，收货很大，简要的进行两点进行总结：</p>
+<p>—今天深夜：听了大咖的一些阅读分享，收货很大，简要的进行两点进行总结：</p>
 <ul>
 <li>1.共有信息到大众信息转化的重要性，即有些话需要直接表达出来，不要去猜对方，例如领导，朋友的想法。</li>
 <li>2.未来的核心竞争力，可能并不是你去掌握多少种技能或者技术，而是如何调度周边的技能或者技术，进行整合资源，创造出更高价值的能力。</li>
 </ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/kitchen/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dlong RY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DlongRY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/kitchen/" itemprop="url">厨房小白的入门指南</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-16T13:35:54+08:00">
-                2018-12-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/厨房小记/" itemprop="url" rel="index">
-                    <span itemprop="name">厨房小记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/kitchen/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/kitchen/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/kitchen/" class="leancloud_visitors" data-flag-title="厨房小白的入门指南">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="厨房中常见的调料介绍："><a href="#厨房中常见的调料介绍：" class="headerlink" title="厨房中常见的调料介绍："></a>厨房中常见的调料介绍：</h2><p>一个食材可以做出各种不同的味道，其中调味的用法，占比经常起到关键作用。接下来将介绍一些厨房常见的调味品。明白了调味品的作用我们才知道做菜的时候该加哪一种调味，新手做完一道菜才知道是什么加多加少了，便于厨艺的进一步提高。</p>
-<h3 id="家常必备-糖，盐，味精"><a href="#家常必备-糖，盐，味精" class="headerlink" title="家常必备:糖，盐，味精"></a>家常必备:糖，盐，味精</h3><p>这三个作为基本的做菜调料，经常会放在分开放在一个调味盒中，由于都是颗粒状调味品，新手往往容易弄错。</p>
-<p><img src="https://qcloud.coding.net/u/dlongry/p/blogResources/git/raw/master/kitchen/%E7%B3%96.png" width="80%/"> </p>
 
           
         
@@ -1362,17 +1624,17 @@
       
         
           
-            <h2 id="本博客包含以下三个部分，并不定期更新"><a href="#本博客包含以下三个部分，并不定期更新" class="headerlink" title="本博客包含以下三个部分，并不定期更新"></a>本博客包含以下三个部分，并不定期更新</h2><h3 id="1-DIY智能工坊（DIY-Inteligence-Factory）-："><a href="#1-DIY智能工坊（DIY-Inteligence-Factory）-：" class="headerlink" title="1. DIY智能工坊（DIY Inteligence Factory） ："></a>1. DIY智能工坊（DIY Inteligence Factory） ：</h3><p>– 介绍有趣的github 人工智能项目</p>
-<p>– 介绍有趣或实用的3D 打印，机械设计和电子DIY作品</p>
-<h3 id="2-虚拟-增强现实（VR-amp-AR）："><a href="#2-虚拟-增强现实（VR-amp-AR）：" class="headerlink" title="2. 虚拟/增强现实（VR&amp;AR）："></a>2. 虚拟/增强现实（VR&amp;AR）：</h3><p>– 分享OpenVR学习教程 （软件）<br>– 分享unity3D的VR，AR游戏设计教程（软件）<br>– 分享DIY VR&amp;AR的外设制作教程（硬件）</p>
-<h3 id="3-享受生活-（Enjoy-Life）："><a href="#3-享受生活-（Enjoy-Life）：" class="headerlink" title="3. 享受生活 （Enjoy Life）："></a>3. 享受生活 （Enjoy Life）：</h3><p>– 进行厨艺分享，包括美食介绍和制作<br>– 旅行摄影杂谈，分享生活的所见所闻</p>
-<h3 id="4-阅读分享："><a href="#4-阅读分享：" class="headerlink" title="4.阅读分享："></a>4.阅读分享：</h3><h4 id="0-网络结构搜索-NAS-论文阅读分享"><a href="#0-网络结构搜索-NAS-论文阅读分享" class="headerlink" title="(0) 网络结构搜索(NAS)论文阅读分享"></a>(0) 网络结构搜索(NAS)论文阅读分享</h4><h4 id="1-《算法引论》"><a href="#1-《算法引论》" class="headerlink" title="(1).《算法引论》"></a>(1).《算法引论》</h4><p>– 分享算法引论中的思考与感悟</p>
-<h4 id="2-《English-for-Writing-Research-Paper》"><a href="#2-《English-for-Writing-Research-Paper》" class="headerlink" title="(2).《English for Writing Research Paper》"></a>(2).《English for Writing Research Paper》</h4><p>– 精简书籍中的要点，备查并提高自己的英语论文写作水平</p>
-<h4 id="3-《人性的弱点》："><a href="#3-《人性的弱点》：" class="headerlink" title="(3)《人性的弱点》："></a>(3)《人性的弱点》：</h4><p>– 分享人际，沟通，职场相关的感悟</p>
-<h4 id="4-《漫步华尔街》"><a href="#4-《漫步华尔街》" class="headerlink" title="(4).《漫步华尔街》"></a>(4).《漫步华尔街》</h4><p>– 投资，理财感悟的一些事</p>
-<h4 id="5-《学会提问》"><a href="#5-《学会提问》" class="headerlink" title="(5).《学会提问》"></a>(5).《学会提问》</h4><p>– 批判性思维锻炼的入门书总结</p>
-<h4 id="6-《从一到无穷大》"><a href="#6-《从一到无穷大》" class="headerlink" title="(6).《从一到无穷大》"></a>(6).《从一到无穷大》</h4><p>– 科普读物的感悟，提高对科学的兴趣</p>
-<h3 id="每日感悟杂谈"><a href="#每日感悟杂谈" class="headerlink" title="每日感悟杂谈"></a>每日感悟杂谈</h3><p>– 总结每日收货和下次需要提高的点</p>
+            <h2 id="本博客包含以下三个部分，并不定期更新"><a href="#本博客包含以下三个部分，并不定期更新" class="headerlink" title="本博客包含以下三个部分，并不定期更新"></a>本博客包含以下三个部分，并不定期更新</h2><h3 id="1-DIY智能工坊（DIY-Inteligence-Factory）-："><a href="#1-DIY智能工坊（DIY-Inteligence-Factory）-：" class="headerlink" title="1. DIY智能工坊（DIY Inteligence Factory） ："></a>1. DIY智能工坊（DIY Inteligence Factory） ：</h3><p>— 介绍有趣的github 人工智能项目</p>
+<p>— 介绍有趣或实用的3D 打印，机械设计和电子DIY作品</p>
+<h3 id="2-虚拟-增强现实（VR-amp-AR）："><a href="#2-虚拟-增强现实（VR-amp-AR）：" class="headerlink" title="2. 虚拟/增强现实（VR&amp;AR）："></a>2. 虚拟/增强现实（VR&amp;AR）：</h3><p>— 分享OpenVR学习教程 （软件）<br>— 分享unity3D的VR，AR游戏设计教程（软件）<br>— 分享DIY VR&amp;AR的外设制作教程（硬件）</p>
+<h3 id="3-享受生活-（Enjoy-Life）："><a href="#3-享受生活-（Enjoy-Life）：" class="headerlink" title="3. 享受生活 （Enjoy Life）："></a>3. 享受生活 （Enjoy Life）：</h3><p>— 进行厨艺分享，包括美食介绍和制作<br>— 旅行摄影杂谈，分享生活的所见所闻</p>
+<h3 id="4-阅读分享："><a href="#4-阅读分享：" class="headerlink" title="4.阅读分享："></a>4.阅读分享：</h3><h4 id="0-网络结构搜索-NAS-论文阅读分享"><a href="#0-网络结构搜索-NAS-论文阅读分享" class="headerlink" title="(0) 网络结构搜索(NAS)论文阅读分享"></a>(0) 网络结构搜索(NAS)论文阅读分享</h4><h4 id="1-《算法引论》"><a href="#1-《算法引论》" class="headerlink" title="(1).《算法引论》"></a>(1).《算法引论》</h4><p>— 分享算法引论中的思考与感悟</p>
+<h4 id="2-《English-for-Writing-Research-Paper》"><a href="#2-《English-for-Writing-Research-Paper》" class="headerlink" title="(2).《English for Writing Research Paper》"></a>(2).《English for Writing Research Paper》</h4><p>— 精简书籍中的要点，备查并提高自己的英语论文写作水平</p>
+<h4 id="3-《人性的弱点》："><a href="#3-《人性的弱点》：" class="headerlink" title="(3)《人性的弱点》："></a>(3)《人性的弱点》：</h4><p>— 分享人际，沟通，职场相关的感悟</p>
+<h4 id="4-《漫步华尔街》"><a href="#4-《漫步华尔街》" class="headerlink" title="(4).《漫步华尔街》"></a>(4).《漫步华尔街》</h4><p>— 投资，理财感悟的一些事</p>
+<h4 id="5-《学会提问》"><a href="#5-《学会提问》" class="headerlink" title="(5).《学会提问》"></a>(5).《学会提问》</h4><p>— 批判性思维锻炼的入门书总结</p>
+<h4 id="6-《从一到无穷大》"><a href="#6-《从一到无穷大》" class="headerlink" title="(6).《从一到无穷大》"></a>(6).《从一到无穷大》</h4><p>— 科普读物的感悟，提高对科学的兴趣</p>
+<h3 id="每日感悟杂谈"><a href="#每日感悟杂谈" class="headerlink" title="每日感悟杂谈"></a>每日感悟杂谈</h3><p>— 总结每日收货和下次需要提高的点</p>
 <!--![world](https://qcloud.coding.net/u/dlongry/p/blogResources/git/raw/master/hello-world/world.jpg)-->
 
           
@@ -1459,7 +1721,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1830,6 +2092,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 
