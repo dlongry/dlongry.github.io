@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro_analy/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dlong RY">
@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Algo_intro/" itemprop="url">《算法导论》第二章：数学归纳法</a></h1>
+                <a class="post-title-link" href="/Algo_intro_analy/" itemprop="url">《算法导论》第三章：算法分析</a></h1>
         
 
         <div class="post-meta">
@@ -321,8 +321,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Algo_intro/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro/" itemprop="commentCount"></span>
+                <a href="/Algo_intro_analy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro_analy/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -330,7 +330,7 @@
 
           
           
-             <span id="/Algo_intro/" class="leancloud_visitors" data-flag-title="《算法导论》第二章：数学归纳法">
+             <span id="/Algo_intro_analy/" class="leancloud_visitors" data-flag-title="《算法导论》第三章：算法分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -363,9 +363,24 @@
       
         
           
-            <h3 id="第一章的简要介绍"><a href="#第一章的简要介绍" class="headerlink" title="第一章的简要介绍"></a>第一章的简要介绍</h3><p>第一章的内容比较简洁，这里简单提一下。首先在第一章中，作者简单概括了算法设计的基本步骤，分别是：设计，正确性证明，分析和实现。而本书主要集中于讨论第一个阶段，即设计。另外作者在第一章中也明确说明了本书主要讲明数学归纳法的思想在算法设计中的作用。并提前告知了虽然并非所有算法设计都可以基于数学归纳法进行解决，但是绝大数算法可以从数学归纳法作为切入点进行思考。那么接下来第二章的内容就是讲述常见的数学归纳法了。</p>
-<p>(OK,这里我们需要留着一个问题去读书籍：既然并非所有算法都适合数学归纳法，那么什么时候适合用数学归纳法分析，什么时候不合适。是否有好的判别方法呢？)</p>
-<h3 id="第二章数学归纳法"><a href="#第二章数学归纳法" class="headerlink" title="第二章数学归纳法:"></a>第二章数学归纳法:</h3><p><img src="https://gitee.com/dlongry/blog_image/raw/master/img/20200426075657.png" alt=""></p>
+            <h3 id="本章内容概括"><a href="#本章内容概括" class="headerlink" title="本章内容概括"></a>本章内容概括</h3><p>算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。</p>
+<h3 id="大O符号和Ω符号"><a href="#大O符号和Ω符号" class="headerlink" title="大O符号和Ω符号:"></a>大O符号和Ω符号:</h3><h4 id="大O符号定义："><a href="#大O符号定义：" class="headerlink" title="大O符号定义："></a>大O符号定义：</h4><p>  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。首先，如果存在常数项c和N，使得对于所有的n&gt;=N,有g(n)&lt;=cf(n),则称函数g(n)相对于另一个函数f(n)是O(f(n)).从这个公式可以看出，对于足够大的n，函数g(n)不超过函数f(n)的一个固定倍数。函数g(n)可能比cf(n)小。符号O是从上限进行约束。</p>
+<h4 id="大O符号性质与常见推论与定理："><a href="#大O符号性质与常见推论与定理：" class="headerlink" title="大O符号性质与常见推论与定理："></a>大O符号性质与常见推论与定理：</h4><ul>
+<li>1.O中包含常数项没有意义，所以我们有O(n) 而不写诸如O(5n+4)</li>
+<li>2.对数不必写出底数，因为不同的底数，根据换底公式也只是常数项的区别，故写为O(logn)</li>
+<li>3.O(1) 用来表示常数项</li>
+<li>4.指数函数要比一个多项式函数增长得快，即$ (f(n))^c = O(a^{f(n)})$ 如果用n代替f(n)，对于所有常数c&gt;0和a&gt;1,有$n^c=O(a^n)$</li>
+<li>5.线性函数比一个对数函数增长得快，推导：如果用$log_a^n$ 代替推论4公式中的f(n),对于所有常数c&gt;0和a&gt;1,有 $(log_a^n)^c=O(a^{log_a^n})=O(n))$</li>
+<li><p>6.大O符号基本性质：满足加法律和结合律，<strong>由于O符号表示&lt;=,注意不能定义减法和除法</strong>：</p>
+<pre><code>1.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)+g(n) = O(s(n)+r(n))
+2.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)*g(n) = O(s(n)*r(n))
+</code></pre></li>
+<li>7.根据定义，大O符号可能会存在很上限太大，没有实际意义的问题。</li>
+</ul>
+<h4 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h4><ul>
+<li>1.下界Ω符号：如果存在常数项c和N，使得对于所有的n&gt;=N,在输入规模为n时解决问题的步数T(n)至少为cg(n),则我们说T(n)=Ω(g(n)).</li>
+<li>2.等效θ符号，如果f(n)同时满足:f(n)=O(g(n)),f(n)=Ω(g(n)),则可又记为f(n)=θ(g(n))</li>
+</ul>
 <h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
 <ul>
 <li>1.当n=1时，T成立</li>
@@ -625,7 +640,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro_analy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dlong RY">
@@ -644,7 +659,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Algo_intro_analy/" itemprop="url">《算法导论》第三章：算法分析</a></h1>
+                <a class="post-title-link" href="/Algo_intro/" itemprop="url">《算法导论》第二章：数学归纳法</a></h1>
         
 
         <div class="post-meta">
@@ -697,8 +712,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Algo_intro_analy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro_analy/" itemprop="commentCount"></span>
+                <a href="/Algo_intro/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -706,7 +721,7 @@
 
           
           
-             <span id="/Algo_intro_analy/" class="leancloud_visitors" data-flag-title="《算法导论》第三章：算法分析">
+             <span id="/Algo_intro/" class="leancloud_visitors" data-flag-title="《算法导论》第二章：数学归纳法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -739,24 +754,9 @@
       
         
           
-            <h3 id="本章内容概括"><a href="#本章内容概括" class="headerlink" title="本章内容概括"></a>本章内容概括</h3><p>算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。</p>
-<h3 id="大O符号和Ω符号"><a href="#大O符号和Ω符号" class="headerlink" title="大O符号和Ω符号:"></a>大O符号和Ω符号:</h3><h4 id="大O符号定义："><a href="#大O符号定义：" class="headerlink" title="大O符号定义："></a>大O符号定义：</h4><p>  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。首先，如果存在常数项c和N，使得对于所有的n&gt;=N,有g(n)&lt;=cf(n),则称函数g(n)相对于另一个函数f(n)是O(f(n)).从这个公式可以看出，对于足够大的n，函数g(n)不超过函数f(n)的一个固定倍数。函数g(n)可能比cf(n)小。符号O是从上限进行约束。</p>
-<h4 id="大O符号性质与常见推论与定理："><a href="#大O符号性质与常见推论与定理：" class="headerlink" title="大O符号性质与常见推论与定理："></a>大O符号性质与常见推论与定理：</h4><ul>
-<li>1.O中包含常数项没有意义，所以我们有O(n) 而不写诸如O(5n+4)</li>
-<li>2.对数不必写出底数，因为不同的底数，根据换底公式也只是常数项的区别，故写为O(logn)</li>
-<li>3.O(1) 用来表示常数项</li>
-<li>4.指数函数要比一个多项式函数增长得快，即$ (f(n))^c = O(a^{f(n)})$ 如果用n代替f(n)，对于所有常数c&gt;0和a&gt;1,有$n^c=O(a^n)$</li>
-<li>5.线性函数比一个对数函数增长得快，推导：如果用$log_a^n$ 代替推论4公式中的f(n),对于所有常数c&gt;0和a&gt;1,有 $(log_a^n)^c=O(a^{log_a^n})=O(n))$</li>
-<li><p>6.大O符号基本性质：满足加法律和结合律，<strong>由于O符号表示&lt;=,注意不能定义减法和除法</strong>：</p>
-<pre><code>1.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)+g(n) = O(s(n)+r(n))
-2.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)*g(n) = O(s(n)*r(n))
-</code></pre></li>
-<li>7.根据定义，大O符号可能会存在很上限太大，没有实际意义的问题。</li>
-</ul>
-<h4 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h4><ul>
-<li>1.下界Ω符号：如果存在常数项c和N，使得对于所有的n&gt;=N,在输入规模为n时解决问题的步数T(n)至少为cg(n),则我们说T(n)=Ω(g(n)).</li>
-<li>2.等效θ符号，如果f(n)同时满足:f(n)=O(g(n)),f(n)=Ω(g(n)),则可又记为f(n)=θ(g(n))</li>
-</ul>
+            <h3 id="第一章的简要介绍"><a href="#第一章的简要介绍" class="headerlink" title="第一章的简要介绍"></a>第一章的简要介绍</h3><p>第一章的内容比较简洁，这里简单提一下。首先在第一章中，作者简单概括了算法设计的基本步骤，分别是：设计，正确性证明，分析和实现。而本书主要集中于讨论第一个阶段，即设计。另外作者在第一章中也明确说明了本书主要讲明数学归纳法的思想在算法设计中的作用。并提前告知了虽然并非所有算法设计都可以基于数学归纳法进行解决，但是绝大数算法可以从数学归纳法作为切入点进行思考。那么接下来第二章的内容就是讲述常见的数学归纳法了。</p>
+<p>(OK,这里我们需要留着一个问题去读书籍：既然并非所有算法都适合数学归纳法，那么什么时候适合用数学归纳法分析，什么时候不合适。是否有好的判别方法呢？)</p>
+<h3 id="第二章数学归纳法"><a href="#第二章数学归纳法" class="headerlink" title="第二章数学归纳法:"></a>第二章数学归纳法:</h3><p><img src="https://gitee.com/dlongry/blog_image/raw/master/img/20200426075657.png" alt=""></p>
 <h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
 <ul>
 <li>1.当n=1时，T成立</li>
