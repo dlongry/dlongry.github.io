@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro_analy/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-3-10/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dlong RY">
@@ -268,7 +268,179 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Algo_intro_analy/" itemprop="url">《算法导论》第三章：算法分析</a></h1>
+                <a class="post-title-link" href="/2020-3-10/" itemprop="url">浅谈断层的逻辑</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-10T22:01:00+08:00">
+                2020-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/每日感悟杂谈/" itemprop="url" rel="index">
+                    <span itemprop="name">每日感悟杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020-3-10/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020-3-10/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020-3-10/" class="leancloud_visitors" data-flag-title="浅谈断层的逻辑">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今年的春节由于武汉肺炎的关系，大家都不敢出门。我也因此宅在家中很久，为国家抗疫战争献上自己的微薄之力。到了近期才正式复工并且从今天起开始继续更新博客。</p>
+<p>回到今天早上，由于最近开始《算法引论》的学习（具体内容会进行总结，写在博客的另一个部分《阅读书籍分享》）。里面第二章主要讲数学归纳法的内容，其中有几个地方对我感触比较大，</p>
+<ul>
+<li><p>第一个就是“发明者悖论”（inventor paradox）即需要证明的定理2比定理1要强，但是定理2却更好证明。举个不是很恰当的例子：定理1：证明星型的气球容易被针戳破。定理2：证明气球容易被针戳破。实际上证明定理二就行，这样你就不需要考虑其他形状的因素。很明显虽然证明的东西更强了（定理2成立，定理1一定成立），但是证明更简单了。对于为什么“发明者悖论”会出现在数学归纳法中，是因为尽管需要证明的东西变多了，然后由于归纳的基础变强（从星型气球到任意形状气球），就是定理2给了信息更加丰富的条件，使得证明变得容易了。</p>
+</li>
+<li><p>第二个就是思维的断层问题：数学归纳法的典型思路是这样的，证明n=1成立，推导出n=2也成立，然后n=2成立推导出n=3成立，依次类推，即假设n=i成立，去推导n=i+1 成立。那么整个定理就成立，这是一个十分优雅连续的过程。但是有时候，你会忽略特殊情况的存在。比如考虑一下书中给的这个简单的命题：已知平面上的n条直线，任意两条线都不平行，则所有的直线一定交于一点。“证明”过程：n=1，时显然成立，n=2，显然成立。此时你不需要急于去假设n=i，去证明n=i+1成立。而是查看继续观察，就会得出n=3的时候，明显定理就不成立了。</p>
+</li>
+<li><p>相比于第二点忽略了特殊情况的思维断层，还有一种思维断层是现实生活中常见的逻辑错误。比如我买了一只猫，所以家里老鼠少了。其实这个是两件事，且无法从A，推导到B的。只是由于常识性习惯性的理解，而没有去动脑经思考里两者的必然关系。比如买了一只猫，由于它抓了老鼠，所以家里老鼠少了，这样才真正的具有逻辑性才算连续和完整。在平时的闲聊这种逻辑性似乎可以被淡化，但是一旦和人进行方案的讨论，论点的证明（比如写论文），如果缺少这种连贯性，往往会疏忽实际的原因，得到错误的分析结果。</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro exec/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dlong RY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DlongRY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Algo_intro exec/" itemprop="url">《算法导论》第二章：数学归纳法-习题</a></h1>
         
 
         <div class="post-meta">
@@ -321,8 +493,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Algo_intro_analy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro_analy/" itemprop="commentCount"></span>
+                <a href="/Algo_intro exec/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro exec/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -330,7 +502,7 @@
 
           
           
-             <span id="/Algo_intro_analy/" class="leancloud_visitors" data-flag-title="《算法导论》第三章：算法分析">
+             <span id="/Algo_intro exec/" class="leancloud_visitors" data-flag-title="《算法导论》第二章：数学归纳法-习题">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -363,70 +535,13 @@
       
         
           
-            <h3 id="本章内容概括"><a href="#本章内容概括" class="headerlink" title="本章内容概括"></a>本章内容概括</h3><p>算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。</p>
-<h3 id="大O符号和Ω符号"><a href="#大O符号和Ω符号" class="headerlink" title="大O符号和Ω符号:"></a>大O符号和Ω符号:</h3><h4 id="大O符号定义："><a href="#大O符号定义：" class="headerlink" title="大O符号定义："></a>大O符号定义：</h4><p>  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。首先，如果存在常数项c和N，使得对于所有的n&gt;=N,有g(n)&lt;=cf(n),则称函数g(n)相对于另一个函数f(n)是O(f(n)).从这个公式可以看出，对于足够大的n，函数g(n)不超过函数f(n)的一个固定倍数。函数g(n)可能比cf(n)小。符号O是从上限进行约束。</p>
-<h4 id="大O符号性质与常见推论与定理："><a href="#大O符号性质与常见推论与定理：" class="headerlink" title="大O符号性质与常见推论与定理："></a>大O符号性质与常见推论与定理：</h4><ul>
-<li>1.O中包含常数项没有意义，所以我们有O(n) 而不写诸如O(5n+4)</li>
-<li>2.对数不必写出底数，因为不同的底数，根据换底公式也只是常数项的区别，故写为O(logn)</li>
-<li>3.O(1) 用来表示常数项</li>
-<li>4.指数函数要比一个多项式函数增长得快，即$ (f(n))^c = O(a^{f(n)})$ 如果用n代替f(n)，对于所有常数c&gt;0和a&gt;1,有$n^c=O(a^n)$</li>
-<li>5.线性函数比一个对数函数增长得快，推导：如果用$log_a^n$ 代替推论4公式中的f(n),对于所有常数c&gt;0和a&gt;1,有 $(log_a^n)^c=O(a^{log_a^n})=O(n))$</li>
-<li><p>6.大O符号基本性质：满足加法律和结合律，<strong>由于O符号表示&lt;=,注意不能定义减法和除法</strong>：</p>
-<pre><code>1.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)+g(n) = O(s(n)+r(n))
-2.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)*g(n) = O(s(n)*r(n))
-</code></pre></li>
-<li>7.根据定义，大O符号可能会存在很上限太大，没有实际意义的问题。</li>
-</ul>
-<h4 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h4><ul>
-<li>1.下界Ω符号：如果存在常数项c和N，使得对于所有的n&gt;=N,在输入规模为n时解决问题的步数T(n)至少为cg(n),则我们说T(n)=Ω(g(n)).</li>
-<li>2.等效θ符号，如果f(n)同时满足:f(n)=O(g(n)),f(n)=Ω(g(n)),则可又记为f(n)=θ(g(n))</li>
-</ul>
-<h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
+            <h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
 <ul>
 <li>1.当n=1时，T成立</li>
 <li>2.对于任意的i&gt;1,如果n=i-1时T成立，可以推出n=i时，T也成立</li>
 </ul>
 <p>这里我们n=1的情况往往是比较好证明的，然后我们假设n-1时，T成立的条件，去推导出n时T也成立。这样就可以从n=1，推出n=2 T成立，从n=2，推出n=3成立，以此类推从而证明对于所有的n，T都成立。</p>
 <p>这里有个注意点：<strong>n为自然数</strong>，思考如果欲证明的自变量n不是自然数的定理T，是否可以使用数学归纳法呢？</p>
-<p>这个基本定义比较简单，就不举例说明了。</p>
-<h4 id="数学归纳法变种一："><a href="#数学归纳法变种一：" class="headerlink" title="数学归纳法变种一："></a>数学归纳法变种一：</h4><p>对于基本原理，用n和n+1 代替 n-1和n，那么可以很自然的有如下的变种：</p>
-<ul>
-<li>1.当n=1时，T成立。</li>
-<li>2.对于任意的i&gt;1,假设n=i时T成立，可以推出n=i+1时 T 也成立。那么T对于任意自然数都成立</li>
-</ul>
-<h4 id="数学归纳法变种二（强归纳假设）："><a href="#数学归纳法变种二（强归纳假设）：" class="headerlink" title="数学归纳法变种二（强归纳假设）："></a>数学归纳法变种二（强归纳假设）：</h4><ul>
-<li>1.n=1时,T成立</li>
-<li><p>2.如果对每个i(i&gt;1), 假设自然数m是任意的小于i的值，当n=m时T都成立。能够推出n=i时，T也成立。那么可以证明T对于任意自然数都成立。</p>
-<p>可以看出，由于这里的假设条件变强了，是n等于小于i的值都假设P能成立。而基本的归纳假设紧紧是n=i-1时，假设T成立，是强归纳假设的其中一个子假设。故名为强归纳法。而这个变种成立也是显而易见的，n=2时，由于n=1成立，所以n=2成立。n=3时，由于n=1，2成立，所以n=3成立。以此类推。</p>
-</li>
-</ul>
-<h4 id="数学归纳法变种三（分块归纳法）"><a href="#数学归纳法变种三（分块归纳法）" class="headerlink" title="数学归纳法变种三（分块归纳法）:"></a>数学归纳法变种三（分块归纳法）:</h4><ul>
-<li>1.n=1时，T成立。 n=2时，T成立。</li>
-<li>2.如果对每一个n(n&gt;2),若n-2时，T成立能够推出n时 T也成立; 那么对于任意自然数，T都成立。</li>
-</ul>
-<p>这个归纳法可以将自然数分为奇数偶数的情况来证明，当n=1时成立，n-2假设成立，可以推出n=3成立，即奇数都成立；同样n=2时成立，n-2假设成立，推出n=4成立，偶数都成立。所以所有自然数都成立。</p>
-<p>注意：既然是分块归纳，那么<strong>分块</strong>的方式会根据具体所证明内容而发生变化。相对应的<strong>证明要求也不一定是所有自然数</strong>，有可能是分块后的整数。例如上面的单独证明奇数或者偶数。如下面是常见的一种数学归纳法的证明：</p>
-<ul>
-<li>1.n=1时，T成立</li>
-<li>2.n(n&gt;1 且 为2的整数幂)，假设 n/2时命题T成立，可以推出n命题P也成立，那么对任意一个2的整数幂的自然数，T都成立。</li>
-</ul>
-<h3 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h3><h4 id="归纳技巧1：通过特例得到假设，并用归纳法证明："><a href="#归纳技巧1：通过特例得到假设，并用归纳法证明：" class="headerlink" title="归纳技巧1：通过特例得到假设，并用归纳法证明："></a>归纳技巧1：通过特例得到假设，并用归纳法证明：</h4><p>例子如下：假设要计算和T(n) = 8+13+18+23+…+(3+5n), 如何有效进行使用数学归纳法：</p>
-<ul>
-<li>1.通过特例找到假设：根据1+2+3+4…+n的数列的和为$n^2/2+n/2$ 与题目的序列是同一个幂级数级别，不防假设T(n) 也满足二次多项式表示 $G(n) = c1 \times n^2+c2 \times n + c3$ 通过n=0，n=1，n=2的特例，带入G(n) 解决方程组，获得c1，c2，c3<br>分别我2.5，5.5,0.所以得到假设$ T(n) = 2.5n^2+5.5n$</li>
-<li>2.通过数学归纳法证明此假设。</li>
-</ul>
-<h4 id="归纳技巧2：多多运用等价证明"><a href="#归纳技巧2：多多运用等价证明" class="headerlink" title="归纳技巧2：多多运用等价证明"></a>归纳技巧2：多多运用等价证明</h4><p>例子：任意两条不平行，任意三条不想交的n条直线，试用归纳法证明，其会将平面划分成n(n+1)/2+1。直接使用归纳假设时比较困难的额，我们可以通过特例推导将问题归约成：证明：添加第n条直线，可以增加n个区域。<br>所以证明变为：</p>
-<ul>
-<li>假设第n条直线，使得平面增加了n个区域，去证明添加第n+1条直线，使得平面增加了n+1个区域</li>
-</ul>
-<h4 id="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系"><a href="#归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系" class="headerlink" title="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系"></a>归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系</h4><p>如技巧2中的例子，如何从第n条直线使得平面增加了n个区域，推导出第n+1条直线，平面增加n+1个区域呢？假设没有第n条直线，直接放入第n+1条直线，根据假设，应该也只是添加了n个区域，所以第n条直线的加入，使得第n+1条直线多分出了一个区域。故证明可以变为：</p>
-<ul>
-<li>第n条直线的存在使得第n+1条直线多分割了一个区域。</li>
-</ul>
-<h3 id="数学归纳法常见错误："><a href="#数学归纳法常见错误：" class="headerlink" title="数学归纳法常见错误："></a>数学归纳法常见错误：</h3><h4 id="1-忽略的假设条件："><a href="#1-忽略的假设条件：" class="headerlink" title="1.忽略的假设条件："></a>1.忽略的假设条件：</h4><p>举例来说：要证明的定理的图只被假设成连通的，在证明过程中却忘了在图的变减少后检验图的连通性。这导致了归纳假设的错误。所以准确定义归纳假设时十分重要的。</p>
-<h4 id="2-从假设n到n-1中，n-1的情况必须是任意的。"><a href="#2-从假设n到n-1中，n-1的情况必须是任意的。" class="headerlink" title="2.从假设n到n+1中，n+1的情况必须是任意的。"></a>2.从假设n到n+1中，n+1的情况必须是任意的。</h4><p>即在n+1的时候，你不能使用特殊情况的n+1来进行推理。比如在图形归纳假设的问题中，n+1条直线的位置不能是有特殊性质的。而你推论的时候把它放在了特殊位置来进行推理</p>
-<h4 id="3-证明过程，忽略了的基本n-1，n-2情况的验证。"><a href="#3-证明过程，忽略了的基本n-1，n-2情况的验证。" class="headerlink" title="3.证明过程，忽略了的基本n=1，n=2情况的验证。"></a>3.证明过程，忽略了的基本n=1，n=2情况的验证。</h4><p>有些命题在推论过程中需要的是n要大于3，甚至n要大于比较大的数才成立。而你只是验证了n=1的情况显然成立。那么就会导致错误的推论。</p>
-<p>(我会专门建立的一个习题解的blog，但是是逐步更新的，我会把解题思路写上，如果需要，可以参考观看，有错误欢迎提出。)</p>
 
           
         
@@ -851,6 +966,232 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro_analy/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dlong RY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DlongRY">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Algo_intro_analy/" itemprop="url">《算法导论》第三章：算法分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-18T22:08:00+08:00">
+                2020-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/阅读书籍《算法导论》/" itemprop="url" rel="index">
+                    <span itemprop="name">阅读书籍《算法导论》</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Algo_intro_analy/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro_analy/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Algo_intro_analy/" class="leancloud_visitors" data-flag-title="《算法导论》第三章：算法分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="本章内容概括"><a href="#本章内容概括" class="headerlink" title="本章内容概括"></a>本章内容概括</h3><p>算法分析主要的目的就是分析其算法的复杂度。如何脱离硬件去度量不同算法的效率呢？本书主要讲述最坏情况的估计方法。而最坏的情况往往是输入规模n非常大的情况。接下来，我主要描述这种分析方法，然后归纳出常见算法的复杂度的数学公式。</p>
+<h3 id="大O符号和Ω符号"><a href="#大O符号和Ω符号" class="headerlink" title="大O符号和Ω符号:"></a>大O符号和Ω符号:</h3><h4 id="大O符号定义："><a href="#大O符号定义：" class="headerlink" title="大O符号定义："></a>大O符号定义：</h4><p>  对算法进行运行时间评估的时候，由于都是考虑n非常大的情况，常数项往往被忽略。为了对此进行有效的说明，所以需要引入一些特别的符号。首先，如果存在常数项c和N，使得对于所有的n&gt;=N,有g(n)&lt;=cf(n),则称函数g(n)相对于另一个函数f(n)是O(f(n)).从这个公式可以看出，对于足够大的n，函数g(n)不超过函数f(n)的一个固定倍数。函数g(n)可能比cf(n)小。符号O是从上限进行约束。</p>
+<h4 id="大O符号性质与常见推论与定理："><a href="#大O符号性质与常见推论与定理：" class="headerlink" title="大O符号性质与常见推论与定理："></a>大O符号性质与常见推论与定理：</h4><ul>
+<li>1.O中包含常数项没有意义，所以我们有O(n) 而不写诸如O(5n+4)</li>
+<li>2.对数不必写出底数，因为不同的底数，根据换底公式也只是常数项的区别，故写为O(logn)</li>
+<li>3.O(1) 用来表示常数项</li>
+<li>4.指数函数要比一个多项式函数增长得快，即$ (f(n))^c = O(a^{f(n)})$ 如果用n代替f(n)，对于所有常数c&gt;0和a&gt;1,有$n^c=O(a^n)$</li>
+<li>5.线性函数比一个对数函数增长得快，推导：如果用$log_a^n$ 代替推论4公式中的f(n),对于所有常数c&gt;0和a&gt;1,有 $(log_a^n)^c=O(a^{log_a^n})=O(n))$</li>
+<li><p>6.大O符号基本性质：满足加法律和结合律，<strong>由于O符号表示&lt;=,注意不能定义减法和除法</strong>：</p>
+<pre><code>1.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)+g(n) = O(s(n)+r(n))
+2.如果 f(n)=O(s(n)) 并且 g(n)=O(r(n)),则f(n)*g(n) = O(s(n)*r(n))
+</code></pre></li>
+<li>7.根据定义，大O符号可能会存在很上限太大，没有实际意义的问题。</li>
+</ul>
+<h4 id="其他符号"><a href="#其他符号" class="headerlink" title="其他符号"></a>其他符号</h4><ul>
+<li>1.下界Ω符号：如果存在常数项c和N，使得对于所有的n&gt;=N,在输入规模为n时解决问题的步数T(n)至少为cg(n),则我们说T(n)=Ω(g(n)).</li>
+<li>2.等效θ符号，如果f(n)同时满足:f(n)=O(g(n)),f(n)=Ω(g(n)),则可又记为f(n)=θ(g(n))</li>
+</ul>
+<h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
+<ul>
+<li>1.当n=1时，T成立</li>
+<li>2.对于任意的i&gt;1,如果n=i-1时T成立，可以推出n=i时，T也成立</li>
+</ul>
+<p>这里我们n=1的情况往往是比较好证明的，然后我们假设n-1时，T成立的条件，去推导出n时T也成立。这样就可以从n=1，推出n=2 T成立，从n=2，推出n=3成立，以此类推从而证明对于所有的n，T都成立。</p>
+<p>这里有个注意点：<strong>n为自然数</strong>，思考如果欲证明的自变量n不是自然数的定理T，是否可以使用数学归纳法呢？</p>
+<p>这个基本定义比较简单，就不举例说明了。</p>
+<h4 id="数学归纳法变种一："><a href="#数学归纳法变种一：" class="headerlink" title="数学归纳法变种一："></a>数学归纳法变种一：</h4><p>对于基本原理，用n和n+1 代替 n-1和n，那么可以很自然的有如下的变种：</p>
+<ul>
+<li>1.当n=1时，T成立。</li>
+<li>2.对于任意的i&gt;1,假设n=i时T成立，可以推出n=i+1时 T 也成立。那么T对于任意自然数都成立</li>
+</ul>
+<h4 id="数学归纳法变种二（强归纳假设）："><a href="#数学归纳法变种二（强归纳假设）：" class="headerlink" title="数学归纳法变种二（强归纳假设）："></a>数学归纳法变种二（强归纳假设）：</h4><ul>
+<li>1.n=1时,T成立</li>
+<li><p>2.如果对每个i(i&gt;1), 假设自然数m是任意的小于i的值，当n=m时T都成立。能够推出n=i时，T也成立。那么可以证明T对于任意自然数都成立。</p>
+<p>可以看出，由于这里的假设条件变强了，是n等于小于i的值都假设P能成立。而基本的归纳假设紧紧是n=i-1时，假设T成立，是强归纳假设的其中一个子假设。故名为强归纳法。而这个变种成立也是显而易见的，n=2时，由于n=1成立，所以n=2成立。n=3时，由于n=1，2成立，所以n=3成立。以此类推。</p>
+</li>
+</ul>
+<h4 id="数学归纳法变种三（分块归纳法）"><a href="#数学归纳法变种三（分块归纳法）" class="headerlink" title="数学归纳法变种三（分块归纳法）:"></a>数学归纳法变种三（分块归纳法）:</h4><ul>
+<li>1.n=1时，T成立。 n=2时，T成立。</li>
+<li>2.如果对每一个n(n&gt;2),若n-2时，T成立能够推出n时 T也成立; 那么对于任意自然数，T都成立。</li>
+</ul>
+<p>这个归纳法可以将自然数分为奇数偶数的情况来证明，当n=1时成立，n-2假设成立，可以推出n=3成立，即奇数都成立；同样n=2时成立，n-2假设成立，推出n=4成立，偶数都成立。所以所有自然数都成立。</p>
+<p>注意：既然是分块归纳，那么<strong>分块</strong>的方式会根据具体所证明内容而发生变化。相对应的<strong>证明要求也不一定是所有自然数</strong>，有可能是分块后的整数。例如上面的单独证明奇数或者偶数。如下面是常见的一种数学归纳法的证明：</p>
+<ul>
+<li>1.n=1时，T成立</li>
+<li>2.n(n&gt;1 且 为2的整数幂)，假设 n/2时命题T成立，可以推出n命题P也成立，那么对任意一个2的整数幂的自然数，T都成立。</li>
+</ul>
+<h3 id="应用："><a href="#应用：" class="headerlink" title="应用："></a>应用：</h3><h4 id="归纳技巧1：通过特例得到假设，并用归纳法证明："><a href="#归纳技巧1：通过特例得到假设，并用归纳法证明：" class="headerlink" title="归纳技巧1：通过特例得到假设，并用归纳法证明："></a>归纳技巧1：通过特例得到假设，并用归纳法证明：</h4><p>例子如下：假设要计算和T(n) = 8+13+18+23+…+(3+5n), 如何有效进行使用数学归纳法：</p>
+<ul>
+<li>1.通过特例找到假设：根据1+2+3+4…+n的数列的和为$n^2/2+n/2$ 与题目的序列是同一个幂级数级别，不防假设T(n) 也满足二次多项式表示 $G(n) = c1 \times n^2+c2 \times n + c3$ 通过n=0，n=1，n=2的特例，带入G(n) 解决方程组，获得c1，c2，c3<br>分别我2.5，5.5,0.所以得到假设$ T(n) = 2.5n^2+5.5n$</li>
+<li>2.通过数学归纳法证明此假设。</li>
+</ul>
+<h4 id="归纳技巧2：多多运用等价证明"><a href="#归纳技巧2：多多运用等价证明" class="headerlink" title="归纳技巧2：多多运用等价证明"></a>归纳技巧2：多多运用等价证明</h4><p>例子：任意两条不平行，任意三条不想交的n条直线，试用归纳法证明，其会将平面划分成n(n+1)/2+1。直接使用归纳假设时比较困难的额，我们可以通过特例推导将问题归约成：证明：添加第n条直线，可以增加n个区域。<br>所以证明变为：</p>
+<ul>
+<li>假设第n条直线，使得平面增加了n个区域，去证明添加第n+1条直线，使得平面增加了n+1个区域</li>
+</ul>
+<h4 id="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系"><a href="#归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n-1和n的关系" class="headerlink" title="归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系"></a>归纳技巧3：n表示某对象的数量，那可以假设第n个对象不存在，去探索n+1和n的关系</h4><p>如技巧2中的例子，如何从第n条直线使得平面增加了n个区域，推导出第n+1条直线，平面增加n+1个区域呢？假设没有第n条直线，直接放入第n+1条直线，根据假设，应该也只是添加了n个区域，所以第n条直线的加入，使得第n+1条直线多分出了一个区域。故证明可以变为：</p>
+<ul>
+<li>第n条直线的存在使得第n+1条直线多分割了一个区域。</li>
+</ul>
+<h3 id="数学归纳法常见错误："><a href="#数学归纳法常见错误：" class="headerlink" title="数学归纳法常见错误："></a>数学归纳法常见错误：</h3><h4 id="1-忽略的假设条件："><a href="#1-忽略的假设条件：" class="headerlink" title="1.忽略的假设条件："></a>1.忽略的假设条件：</h4><p>举例来说：要证明的定理的图只被假设成连通的，在证明过程中却忘了在图的变减少后检验图的连通性。这导致了归纳假设的错误。所以准确定义归纳假设时十分重要的。</p>
+<h4 id="2-从假设n到n-1中，n-1的情况必须是任意的。"><a href="#2-从假设n到n-1中，n-1的情况必须是任意的。" class="headerlink" title="2.从假设n到n+1中，n+1的情况必须是任意的。"></a>2.从假设n到n+1中，n+1的情况必须是任意的。</h4><p>即在n+1的时候，你不能使用特殊情况的n+1来进行推理。比如在图形归纳假设的问题中，n+1条直线的位置不能是有特殊性质的。而你推论的时候把它放在了特殊位置来进行推理</p>
+<h4 id="3-证明过程，忽略了的基本n-1，n-2情况的验证。"><a href="#3-证明过程，忽略了的基本n-1，n-2情况的验证。" class="headerlink" title="3.证明过程，忽略了的基本n=1，n=2情况的验证。"></a>3.证明过程，忽略了的基本n=1，n=2情况的验证。</h4><p>有些命题在推论过程中需要的是n要大于3，甚至n要大于比较大的数才成立。而你只是验证了n=1的情况显然成立。那么就会导致错误的推论。</p>
+<p>(我会专门建立的一个习题解的blog，但是是逐步更新的，我会把解题思路写上，如果需要，可以参考观看，有错误欢迎提出。)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020-1-18/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -971,175 +1312,6 @@
 <h5 id="手机支架："><a href="#手机支架：" class="headerlink" title="手机支架："></a>手机支架：</h5><p>手机支架的折纸方法稍微比较复杂，但是当成功的那一刻，会有豁然开朗的感觉，这里是搬运的视频连接：<br><a href="https://haokan.baidu.com/v?vid=12834977401437570749&amp;pd=bjh&amp;fr=bjhauthor&amp;type=video" target="_blank" rel="noopener">https://haokan.baidu.com/v?vid=12834977401437570749&amp;pd=bjh&amp;fr=bjhauthor&amp;type=video</a></p>
 <p>下面是我的成品图：（- -）依旧不要问我为什么用论文纸叠。。。<br><img src="https://dev.tencent.com/u/dlongry/p/blogResources/git/raw/master/daily_picture/%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6jpg.jpg" width="50%/"> </p>
 <p>以后如果看到实用折纸，还会继续更新上传。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Algo_intro exec/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dlong RY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DlongRY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Algo_intro exec/" itemprop="url">《算法导论》第二章：数学归纳法-习题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-18T22:08:00+08:00">
-                2020-01-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/阅读书籍《算法导论》/" itemprop="url" rel="index">
-                    <span itemprop="name">阅读书籍《算法导论》</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Algo_intro exec/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Algo_intro exec/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Algo_intro exec/" class="leancloud_visitors" data-flag-title="《算法导论》第二章：数学归纳法-习题">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="数学归纳法基本原理"><a href="#数学归纳法基本原理" class="headerlink" title="数学归纳法基本原理:"></a>数学归纳法基本原理:</h4><p>设想要证明的定理为T，若T中含有变量n，n取一切自然数（即正整数），那么证明对于所有的n，T都成立，只需要证明如下：</p>
-<ul>
-<li>1.当n=1时，T成立</li>
-<li>2.对于任意的i&gt;1,如果n=i-1时T成立，可以推出n=i时，T也成立</li>
-</ul>
-<p>这里我们n=1的情况往往是比较好证明的，然后我们假设n-1时，T成立的条件，去推导出n时T也成立。这样就可以从n=1，推出n=2 T成立，从n=2，推出n=3成立，以此类推从而证明对于所有的n，T都成立。</p>
-<p>这里有个注意点：<strong>n为自然数</strong>，思考如果欲证明的自变量n不是自然数的定理T，是否可以使用数学归纳法呢？</p>
 
           
         
@@ -1866,163 +2038,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dlong RY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DlongRY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/hello-world/" itemprop="url">博客介绍</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-18T21:31:39+08:00">
-                2018-11-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/hello-world/" class="leancloud_visitors" data-flag-title="博客介绍">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="本博客包含以下三个部分，并不定期更新"><a href="#本博客包含以下三个部分，并不定期更新" class="headerlink" title="本博客包含以下三个部分，并不定期更新"></a>本博客包含以下三个部分，并不定期更新</h2><h3 id="1-DIY智能工坊（DIY-Inteligence-Factory）-："><a href="#1-DIY智能工坊（DIY-Inteligence-Factory）-：" class="headerlink" title="1. DIY智能工坊（DIY Inteligence Factory） ："></a>1. DIY智能工坊（DIY Inteligence Factory） ：</h3><p>— 介绍有趣的github 人工智能项目</p>
-<p>— 介绍有趣或实用的3D 打印，机械设计和电子DIY作品</p>
-<h3 id="2-虚拟-增强现实（VR-amp-AR）："><a href="#2-虚拟-增强现实（VR-amp-AR）：" class="headerlink" title="2. 虚拟/增强现实（VR&amp;AR）："></a>2. 虚拟/增强现实（VR&amp;AR）：</h3><p>— 分享OpenVR学习教程 （软件）<br>— 分享unity3D的VR，AR游戏设计教程（软件）<br>— 分享DIY VR&amp;AR的外设制作教程（硬件）</p>
-<h3 id="3-享受生活-（Enjoy-Life）："><a href="#3-享受生活-（Enjoy-Life）：" class="headerlink" title="3. 享受生活 （Enjoy Life）："></a>3. 享受生活 （Enjoy Life）：</h3><p>— 进行厨艺分享，包括美食介绍和制作<br>— 旅行摄影杂谈，分享生活的所见所闻</p>
-<h3 id="4-阅读分享："><a href="#4-阅读分享：" class="headerlink" title="4.阅读分享："></a>4.阅读分享：</h3><h4 id="0-网络结构搜索-NAS-论文阅读分享"><a href="#0-网络结构搜索-NAS-论文阅读分享" class="headerlink" title="(0) 网络结构搜索(NAS)论文阅读分享"></a>(0) 网络结构搜索(NAS)论文阅读分享</h4><h4 id="1-《算法引论》"><a href="#1-《算法引论》" class="headerlink" title="(1).《算法引论》"></a>(1).《算法引论》</h4><p>— 分享算法引论中的思考与感悟</p>
-<h4 id="2-《English-for-Writing-Research-Paper》"><a href="#2-《English-for-Writing-Research-Paper》" class="headerlink" title="(2).《English for Writing Research Paper》"></a>(2).《English for Writing Research Paper》</h4><p>— 精简书籍中的要点，备查并提高自己的英语论文写作水平</p>
-<h4 id="3-《人性的弱点》："><a href="#3-《人性的弱点》：" class="headerlink" title="(3)《人性的弱点》："></a>(3)《人性的弱点》：</h4><p>— 分享人际，沟通，职场相关的感悟</p>
-<h4 id="4-《漫步华尔街》"><a href="#4-《漫步华尔街》" class="headerlink" title="(4).《漫步华尔街》"></a>(4).《漫步华尔街》</h4><p>— 投资，理财感悟的一些事</p>
-<h4 id="5-《学会提问》"><a href="#5-《学会提问》" class="headerlink" title="(5).《学会提问》"></a>(5).《学会提问》</h4><p>— 批判性思维锻炼的入门书总结</p>
-<h4 id="6-《从一到无穷大》"><a href="#6-《从一到无穷大》" class="headerlink" title="(6).《从一到无穷大》"></a>(6).《从一到无穷大》</h4><p>— 科普读物的感悟，提高对科学的兴趣</p>
-<h3 id="每日感悟杂谈"><a href="#每日感悟杂谈" class="headerlink" title="每日感悟杂谈"></a>每日感悟杂谈</h3><p>— 总结每日收货和下次需要提高的点</p>
-<!--![world](https://qcloud.coding.net/u/dlongry/p/blogResources/git/raw/master/hello-world/world.jpg)-->
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2068,7 +2088,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
